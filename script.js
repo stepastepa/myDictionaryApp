@@ -1,4 +1,4 @@
-import { myDictionary } from 'dictionary.js';
+import { myDictionary } from 'myDictionaryApp/dictionary.js';
 
 
 /////// How much words? ///////
