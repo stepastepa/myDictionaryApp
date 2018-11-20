@@ -1,4 +1,4 @@
-var myDictionary = [
+const myDictionary = [
     ///////// 2018.11.09 /////////////////////////
     { rus: 'папа', heb: 'אבא', speak: 'аба' },
     { rus: 'пришёл', heb: 'בא', speak: '' },
@@ -85,3 +85,5 @@ var myDictionary = [
     { rus: 'прыгал, сустав', heb: 'קפץ', speak: '' }
 
 ];
+
+export { myDictionary };
