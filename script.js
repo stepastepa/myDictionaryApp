@@ -1,4 +1,4 @@
-
+import { myDictionary } from 'dictionary.js';
 
 
 /////// How much words? ///////
