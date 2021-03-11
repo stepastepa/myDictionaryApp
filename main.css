@@ -78,7 +78,7 @@ h1 {
     margin: auto;
     background-color: rgb(72, 101, 102);
     padding: 20px;
-    width: 180px;
+    max-width: 180px;
     line-height: 42px;
     color: white;
     font-size: 22px;
