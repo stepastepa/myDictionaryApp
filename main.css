@@ -13,7 +13,7 @@ h1 {
 }
 .card {
     margin: auto;
-    width: 750px;
+    max-width: 750px;
     /*height: 480px;*/
     background-color: cadetblue;
     border-radius: 20px;
