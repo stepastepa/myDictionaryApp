@@ -3,23 +3,28 @@ const myDictionary = [
     { rus: 'папа', heb: 'אבא', speak: 'аба', type: '' },
     { rus: 'пришёл', heb: 'בא', speak: 'ба', type: '' },
     { rus: 'отец', heb: 'אב', speak: 'ав', type: '' },
-    { rus: 'спина', heb: 'גב', speak: '', type: '' },
-    { rus: 'крыша', heb: 'גג', speak: '', type: '' },
-    { rus: 'ткань', heb: 'בד', speak: '', type: '' },
-    { rus: 'рыба', heb: 'דג', speak: '', type: '' },
+    { rus: 'спина, назад, тыл', heb: 'גב', speak: 'гев', type: '' },
+    { rus: 'крыша', heb: 'גג', speak: 'гаг', type: '' },
+    { rus: 'ткань, холст', heb: 'בד', speak: 'бад', type: '' },
+    { rus: 'рыба', heb: 'דג', speak: 'даг', type: '' },
+    //
     { rus: 'волновался', heb: 'דאג', speak: '', type: '' },
-    { rus: 'одежда', heb: 'בגד', speak: '', type: '' },
-    { rus: 'руль', heb: 'הגה', speak: '', type: '' },
-    { rus: 'любовь', heb: 'אהבה', speak: '', type: '' },
+    //
+    { rus: 'одежда', heb: 'בגד', speak: 'бегед', type: '' },
+    { rus: 'руль', heb: 'הגה', speak: 'хеге', type: '' },
+    { rus: 'любовь', heb: 'אהבה', speak: 'ахава', type: '' },
     ///////// 2018.11.10 /////////////////////////
-    { rus: 'крючок', heb: 'וו', speak: '', type: '' },
-    { rus: 'кукла', heb: 'בובה', speak: '', type: '' },
-    { rus: 'одинокий', heb: 'בודד', speak: '', type: '' },
+    { rus: 'крючок', heb: 'וו', speak: 'ву (вав)', type: '' },
+    { rus: 'кукла', heb: 'בובה', speak: 'буба', type: '' },
+    { rus: 'одинокий', heb: 'בודד', speak: 'бодед', type: '' },
     ///////// 2018.11.11 /////////////////////////
-    { rus: 'волк', heb: 'זאב', speak: '', type: '' },
-    { rus: 'муха', heb: 'זבוב', speak: '', type: '' },
-    { rus: 'это', heb: 'זה', speak: '', type: '' },
-    { rus: 'золото', heb: 'זהב', speak: '', type: '' },
+    { rus: 'волк', heb: 'זאב', speak: 'зеев', type: '' },
+    { rus: 'муха', heb: 'זבוב', speak: 'звув', type: '' },
+    { rus: 'это', heb: 'זה', speak: 'зе', type: '' },
+    { rus: 'золото', heb: 'זהב', speak: 'захав', type: '' },
+
+
+    
     ///////// 2018.11.12 /////////////////////////
     { rus: 'милый', heb: 'חביב', speak: '', type: '' },
     { rus: 'один', heb: 'אחד', speak: '', type: '' },
