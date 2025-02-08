@@ -76,6 +76,7 @@ body {
 
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 .button {
     flex: 1 1 0;
@@ -87,6 +88,7 @@ body {
     background-color: #000;
     color: #fff;
     cursor: pointer;
+    position: relative;
 }
 #prevButton, #nextButton {
     flex-basis: 50%;
@@ -100,8 +102,21 @@ body {
 #randomButton {
     order: 3;
 }
-.button:hover {
+/* .button:hover {
     box-shadow: inset 0 0 0 2px #fff;
+} */
+.button:after {
+    content: '';
+    position: absolute;
+    background-color: hsl(0 0% 100% / 0.2);
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.button:active:after {
+    width: 200px;
+    height: 200px;
 }
 
 .info-container {
