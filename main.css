@@ -1,96 +1,117 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-    margin-top: 100px;
-    text-align: center;
-    color: #777;
-    font-size: 1.5em;
-    font-weight: 100;
-    /*background-color: grey;*/
+html, body {
+    height: 100%;
 }
+
+html {
+    --font-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+
+    --font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+
+    --font-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,monospace;
+}
+
+body {
+    font-family: var(--font-sans-serif);
+    line-height: 1.5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
 .card {
-    margin: auto;
-    max-width: 750px;
-    /*height: 480px;*/
-    background-color: cadetblue;
-    border-radius: 20px;
-    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    
+    height: 70%;
+
+    background-color: black;
 }
 
 .word {
-    background-color: azure;
-    width: 90%;
-    margin: 30px auto;
-    text-align: center;
-    padding: 10px;
-    font-size: 45px;
-    line-height: 52px;
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
+    padding: 1rem;
+    font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
-    white-space: nowrap;
     overflow: hidden;
 }
 
 #hebrew {
     color: #000;
 }
-    #hebrew.hiddenWord {
-        color: azure;
-    }
-    #hebrew.hiddenWord:hover {
-        color: #000;
-    }
+#hebrew.hiddenWord {
+    color: #fff;
+}
+#hebrew.hiddenWord:hover {
+    color: #000;
+}
+
 #russian {
     color: #000;
 }
-    #russian.hiddenWord {
-        color: azure;
-    }
-    #russian.hiddenWord:hover {
-        color: #000;
-    }
-
-.info-container {
-    width: 200px;
-    /*background-color: lightgrey;*/
-    margin: auto;
-    padding-left: 60px;
+#russian.hiddenWord {
+    color: #fff;
 }
-    #howMuchWords, #wordNumber {
-        /*background-color: grey;*/
-        /*text-align: center;*/
-        font-size: 1.3em;
-        font-weight: 100;
-        color: #777;
-        margin: 10px 0;
-    }
+#russian.hiddenWord:hover {
+    color: #000;
+}
 
 .button-container {
-    margin: auto;
-    margin-top: 30px; 
-    text-align: center;
-    max-width: 750px;
+    height: 30%;
+
+    display: flex;
+    flex-direction: column;
 }
 .button {
-    display: inline-block;
-    text-align: center;
-    margin: auto;
-    background-color: rgb(72, 101, 102);
-    padding: 20px;
-    width: 25%;
-    line-height: 42px;
-    color: white;
-    font-size: 22px;
-    margin: 0 10px;
-    border-radius: 42px;
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
     cursor: pointer;
 }
 .button:hover {
-    background-color: rgb(70, 118, 119);
+    box-shadow: inset 0 0 0 2px #fff;
 }
-.buttonRound {
-    width: 84px;
+
+.info-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #000;
+}
+#howMuchWords,
+#wordNumber {
+    color: #fff;
+    font-size: 0.5rem;
+    padding: 0.25rem;
+}
+
+
+@media (min-width: 640px) {
+    .card {
+        flex-direction: row;
+    }
+    .button-container {
+        flex-direction: row;
+    }
 }
