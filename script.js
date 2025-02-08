@@ -23,6 +23,7 @@ function updateNumber() {
 updateNumber();
 
 /////// shrink current word ///////
+/*
 function shrinkFont() {
     if(russianWord.textContent.length > 20) {
         russianWord.style.fontSize = "35px";
@@ -32,6 +33,7 @@ function shrinkFont() {
         console.log("restore font size!");
     }
 };
+*/
 
 
 
