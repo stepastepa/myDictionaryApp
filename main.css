@@ -111,6 +111,9 @@ body {
     .card {
         flex-direction: row;
     }
+    .word {
+        width: 50%;
+    }
     .button-container {
         flex-direction: row;
     }
