@@ -77,8 +77,14 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.button-container>div {
+    flex: 1 1 0;
+    display: flex;
+}
+
 .button {
-    flex-grow: 1;
+    flex: 1 1 0;
 
     display: flex;
     justify-content: center;
@@ -86,7 +92,6 @@ body {
 
     background-color: #000;
     color: #fff;
-    padding: 1rem;
     cursor: pointer;
 }
 .button:hover {
@@ -98,9 +103,13 @@ body {
     top: 0;
     right: 0;
     background-color: #000;
+
+    display: flex;
+    justify-content: flex-end;
 }
 #howMuchWords,
 #wordNumber {
+    text-align: left;
     color: #fff;
     font-size: 0.5rem;
     padding: 0.25rem;
