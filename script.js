@@ -11,7 +11,7 @@ console.log(letterNumber);
 
 var wordNumber = document.querySelector("#wordNumber");
 
-function updateNumber() {
+function updateCurrentNumber() {
     var currentNumber = letterNumber;
     if (letterNumber !== undefined) {
       currentNumber = letterNumber + 1;
@@ -20,36 +20,25 @@ function updateNumber() {
     }
     wordNumber.textContent = "current: " + currentNumber;
 };
-updateNumber();
-
-/////// shrink current word ///////
-/*
-function shrinkFont() {
-    if(russianWord.textContent.length > 20) {
-        russianWord.style.fontSize = "35px";
-        console.log("shrink font size!");
-    } else if(russianWord.style.fontSize == "35px" && russianWord.textContent.length <= 20) {
-        russianWord.style.fontSize = "45px";
-        console.log("restore font size!");
-    }
-};
-*/
-
+updateCurrentNumber();
 
 
 
 /////////////////////////////////////////////////////////
-//////////////////       buttons       //////////////////
+//////////////////        words        //////////////////
 /////////////////////////////////////////////////////////
 var russianWord = document.querySelector("#russian");
 var hebrewWord = document.querySelector("#hebrew");
+var hebrewSpeak = document.querySelector("#speak");
+var hebrewType = document.querySelector("#type");
 
-function updateWordAndNumberAndFontSize() {
+function updateAll() {
     russianWord.textContent = myDictionary[letterNumber].rus;
     hebrewWord.textContent = myDictionary[letterNumber].heb;
+    hebrewSpeak.textContent = myDictionary[letterNumber].speak;
+    hebrewType.textContent = myDictionary[letterNumber].type;
 
-    updateNumber();
-    shrinkFont();
+    updateCurrentNumber();
 }
 
 
@@ -58,16 +47,16 @@ function updateWordAndNumberAndFontSize() {
 /////////////////////////////
 function randomNumber() {
     letterNumber = Math.floor( Math.random() * myDictionary.length);
-}//done//
+}
 
 function randomWord() {
     var numberPrev = letterNumber;
-    randomNumber();//done//
+    randomNumber();
     while(numberPrev == letterNumber) {
         console.log("Refresh!!!");
-        randomNumber();//done//
+        randomNumber();
     }
-    updateWordAndNumberAndFontSize();
+    updateAll();
 };
 
 var randomButton = document.querySelector("#randomButton");
@@ -87,7 +76,7 @@ function nextWord() {
     if (letterNumber >= myDictionary.length) {
         letterNumber = 0;
     }
-    updateWordAndNumberAndFontSize();
+    updateAll();
 };
 
 var nextButton = document.querySelector("#nextButton");
@@ -104,7 +93,7 @@ function prevWord() {
     if (letterNumber < 0 || letterNumber === undefined) {
         letterNumber = myDictionary.length - 1;
     }
-    updateWordAndNumberAndFontSize();
+    updateAll();
 };
 
 var prevButton = document.querySelector("#prevButton");
@@ -119,50 +108,13 @@ var hebSwitch = document.querySelector("#hebrew");
 
 function rusSelect() {
     hebSwitch.classList.add("hiddenWord");
-    rusSwitch.classList.remove("hiddenWord");//done//
+    rusSwitch.classList.remove("hiddenWord");
 }
 
 function hebSelect() {
     rusSwitch.classList.add("hiddenWord");
-    hebSwitch.classList.remove("hiddenWord");//done//
+    hebSwitch.classList.remove("hiddenWord");
 }
 
 rusSwitch.addEventListener("click", rusSelect);
 hebSwitch.addEventListener("click", hebSelect);
-
-
-/////////////////////////////
-//        Play button      //
-/////////////////////////////
-/*var forward = true;
-var backward = false;
-
-var playWord = function() {
-    if (x !== undefined && forward) {
-        x++;
-    }
-    if (x !== undefined && backward) {
-        x--;
-    }
-    if (x === undefined) {
-        x = 0;
-    }
-    if (x >= myDictionary.length) {*/
-        /*window.clearInterval(play);*/
-/*        console.log("END!");
-        forward = false;
-        backward = true;
-    }
-    if (x == 0) {
-        forward = true;
-        backward = false;
-    }
-    updateWordandNumber();
-};
-var play;
-var playing = function() {
-    play = window.setInterval(playWord, 3000);
-}
-
-var playButton = document.querySelector("#playButton");
-playButton.addEventListener("click", playing);*/
