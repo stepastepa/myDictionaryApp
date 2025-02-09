@@ -30,7 +30,7 @@ updateCurrentNumber();
 var russianWord = document.querySelector("#russian");
 var hebrewWord = document.querySelector("#hebrew>span");
 var hebrewSpeak = document.querySelector("#speak");
-var hebrewType = document.querySelector("#type");
+var hebrewType = document.querySelector("#type>span");
 
 function updateAll() {
     russianWord.textContent = myDictionary[letterNumber].rus;
