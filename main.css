@@ -150,6 +150,8 @@ body {
 .word-details.hiddenDetails:after {
     display: block;
     content: '+';
+    font-size: 1.5rem;
+    padding: 1rem;
 }
 
 
