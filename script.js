@@ -28,7 +28,7 @@ updateCurrentNumber();
 //////////////////        words        //////////////////
 /////////////////////////////////////////////////////////
 var russianWord = document.querySelector("#russian");
-var hebrewWord = document.querySelector("#hebrew");
+var hebrewWord = document.querySelector("#hebrew>span");
 var hebrewSpeak = document.querySelector("#speak");
 var hebrewType = document.querySelector("#type");
 
