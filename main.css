@@ -144,6 +144,13 @@ body {
     font-size: 1rem;
     text-align: center;
 }
+.word-details.hiddenDetails>* {
+    display: none;
+}
+.word-details.hiddenDetails:after {
+    display: block;
+    content: '+';
+}
 
 
 @media (min-width: 640px) {
