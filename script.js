@@ -2,17 +2,17 @@ import { myDictionary } from '/myDictionaryApp/dictionary.js';
 
 
 /////// How much words? ///////
-var howMuchWords = document.querySelector("#howMuchWords");
+let howMuchWords = document.querySelector("#howMuchWords");
 howMuchWords.textContent = "total: " + myDictionary.length;
 
 /////// Number of current word ///////
-var letterNumber;
+let letterNumber;
 console.log(letterNumber);
 
-var wordNumber = document.querySelector("#wordNumber");
+let wordNumber = document.querySelector("#wordNumber");
 
 function updateCurrentNumber() {
-    var currentNumber = letterNumber;
+    let currentNumber = letterNumber;
     if (letterNumber !== undefined) {
       currentNumber = letterNumber + 1;
     } else if (letterNumber === undefined) {
@@ -20,6 +20,7 @@ function updateCurrentNumber() {
     }
     wordNumber.textContent = "current: " + currentNumber;
 };
+// initial current number
 updateCurrentNumber();
 
 
@@ -27,10 +28,10 @@ updateCurrentNumber();
 /////////////////////////////////////////////////////////
 //////////////////        words        //////////////////
 /////////////////////////////////////////////////////////
-var russianWord = document.querySelector("#russian");
-var hebrewWord = document.querySelector("#hebrew>span");
-var hebrewSpeak = document.querySelector("#speak");
-var hebrewType = document.querySelector("#type>span");
+let russianWord = document.querySelector("#russian");
+let hebrewWord = document.querySelector("#hebrew>span");
+let hebrewSpeak = document.querySelector("#speak");
+let hebrewType = document.querySelector("#type>span");
 
 function updateAll() {
     russianWord.textContent = myDictionary[letterNumber].rus;
@@ -60,7 +61,7 @@ function randomNumber() {
 }
 
 function randomWord() {
-    var numberPrev = letterNumber;
+    let numberPrev = letterNumber;
     randomNumber();
     while(numberPrev == letterNumber) {
         console.log("Refresh!!!");
@@ -69,7 +70,7 @@ function randomWord() {
     updateAll();
 };
 
-var randomButton = document.querySelector("#randomButton");
+let randomButton = document.querySelector("#randomButton");
 randomButton.addEventListener("click", randomWord);
 
 
@@ -89,7 +90,7 @@ function nextWord() {
     updateAll();
 };
 
-var nextButton = document.querySelector("#nextButton");
+let nextButton = document.querySelector("#nextButton");
 nextButton.addEventListener("click", nextWord);
 
 
@@ -106,15 +107,15 @@ function prevWord() {
     updateAll();
 };
 
-var prevButton = document.querySelector("#prevButton");
+let prevButton = document.querySelector("#prevButton");
 prevButton.addEventListener("click", prevWord);
 
 
 //////////////////////
 //      switch      //
 //////////////////////
-var rusSwitch = document.querySelector("#russian");
-var hebSwitch = document.querySelector("#hebrew");
+let rusSwitch = document.querySelector("#russian");
+let hebSwitch = document.querySelector("#hebrew");
 
 function rusSelect() {
     hebSwitch.classList.add("hiddenWord");
@@ -128,3 +129,11 @@ function hebSelect() {
 
 rusSwitch.addEventListener("click", rusSelect);
 hebSwitch.addEventListener("click", hebSelect);
+
+
+/////////////////////////////////
+//      show/hide details      //
+/////////////////////////////////
+let detailsSwitch = document.querySelector(".word-details");
+
+detailsSwitch.addEventListener("click", ()=>detailsSwitch.classList.toggle("hiddenDetails"));
