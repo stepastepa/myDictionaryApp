@@ -35,8 +35,18 @@ var hebrewType = document.querySelector("#type>span");
 function updateAll() {
     russianWord.textContent = myDictionary[letterNumber].rus;
     hebrewWord.textContent = myDictionary[letterNumber].heb;
-    hebrewSpeak.textContent = myDictionary[letterNumber].speak;
-    hebrewType.textContent = myDictionary[letterNumber].type;
+    
+    if(!myDictionary[letterNumber].speak) {
+        hebrewSpeak.textContent = '...';
+    } else {
+        hebrewSpeak.textContent = myDictionary[letterNumber].speak;
+    }
+
+    if (!myDictionary[letterNumber].type) {
+        hebrewType.textContent = '...';
+    } else {
+        hebrewType.textContent = myDictionary[letterNumber].type;
+    }
 
     updateCurrentNumber();
 }
