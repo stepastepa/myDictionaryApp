@@ -146,10 +146,5 @@ detailsSwitch.addEventListener("click", ()=>detailsSwitch.classList.toggle("hidd
 //      blink effect      //
 ////////////////////////////
 function blink(currentButton) {
-    if (document.querySelector(".blink")) {
-        document.querySelector(".blink").classList.remove('blink');
-        document.querySelector(currentButton + ">div").classList.add('blink');
-    } else {
-        document.querySelector(currentButton + ">div").classList.add('blink');
-    }
+    document.querySelector(currentButton + ">div").classList.add('blink');
 }
