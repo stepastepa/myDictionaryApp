@@ -60,7 +60,7 @@ function randomNumber() {
     letterNumber = Math.floor( Math.random() * myDictionary.length);
 }
 
-function randomWord() {
+function randomWord(e) {
     let numberPrev = letterNumber;
     randomNumber();
     while(numberPrev == letterNumber) {
@@ -68,17 +68,17 @@ function randomWord() {
         randomNumber();
     }
     updateAll();
-    blink("#randomButton");
+    blink("#randomButton", e);
 };
 
 let randomButton = document.querySelector("#randomButton");
-randomButton.addEventListener("click", randomWord);
+randomButton.addEventListener("click", (e)=>randomWord(e));
 
 
 /////////////////////////////
 //        Next button      //
 /////////////////////////////
-function nextWord() {
+function nextWord(e) {
     if (letterNumber !== undefined) {
         letterNumber++;
     }
@@ -89,17 +89,17 @@ function nextWord() {
         letterNumber = 0;
     }
     updateAll();
-    blink("#nextButton");
+    blink("#nextButton", e);
 };
 
 let nextButton = document.querySelector("#nextButton");
-nextButton.addEventListener("click", nextWord);
+nextButton.addEventListener("click", (e)=>nextWord(e));
 
 
 /////////////////////////////
 //      Previous button    //
 /////////////////////////////
-function prevWord() {
+function prevWord(e) {
     if (letterNumber !== undefined) {
         letterNumber--;
     }
@@ -107,11 +107,11 @@ function prevWord() {
         letterNumber = myDictionary.length - 1;
     }
     updateAll();
-    blink("#prevButton");
+    blink("#prevButton", e);
 };
 
 let prevButton = document.querySelector("#prevButton");
-prevButton.addEventListener("click", prevWord);
+prevButton.addEventListener("click", (e)=>prevWord(e));
 
 
 //////////////////////
@@ -145,12 +145,22 @@ detailsSwitch.addEventListener("click", ()=>detailsSwitch.classList.toggle("hidd
 ////////////////////////////
 //      blink effect      //
 ////////////////////////////
-function blink(currentButton) {
-    let overlay = document.createElement("span");
+function blink(currentButton, e) {
+    // console.log(e);
+    // console.dir(e.currentTarget);
+    let x = e.clientX - e.currentTarget.offsetLeft;
+    let y = e.clientY - e.currentTarget.offsetTop;
+    // console.log(e.clientX, e.clientY);
+    // console.log(e.currentTarget.offsetLeft, e.currentTarget.offsetTop);
+
+    let circle = document.createElement("span");
+    circle.style.top = y + "px";
+    circle.style.left = x + "px";
+
     if (document.querySelector(".blink")) {
         document.querySelector(".blink").removeChild(document.querySelector(".blink>span"));
         document.querySelector(".blink").classList.remove('blink');
     }
     document.querySelector(currentButton + ">div").classList.add('blink');
-    document.querySelector(currentButton + ">div").appendChild(overlay);
+    document.querySelector(currentButton + ">div").appendChild(circle);
 }
