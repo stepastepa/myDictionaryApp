@@ -1,4 +1,4 @@
-import { myDictionary } from '/myDictionaryApp/dictionary.js';
+import { myDictionary } from '/dictionary.js';
 
 
 /////// How much words? ///////
@@ -146,5 +146,11 @@ detailsSwitch.addEventListener("click", ()=>detailsSwitch.classList.toggle("hidd
 //      blink effect      //
 ////////////////////////////
 function blink(currentButton) {
+    let overlay = document.createElement("span");
+    if (document.querySelector(".blink")) {
+        document.querySelector(".blink").removeChild(document.querySelector(".blink>span"));
+        document.querySelector(".blink").classList.remove('blink');
+    }
     document.querySelector(currentButton + ">div").classList.add('blink');
+    document.querySelector(currentButton + ">div").appendChild(overlay);
 }
