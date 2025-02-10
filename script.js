@@ -68,6 +68,7 @@ function randomWord() {
         randomNumber();
     }
     updateAll();
+    blink("#randomButton");
 };
 
 let randomButton = document.querySelector("#randomButton");
@@ -88,6 +89,7 @@ function nextWord() {
         letterNumber = 0;
     }
     updateAll();
+    blink("#nextButton");
 };
 
 let nextButton = document.querySelector("#nextButton");
@@ -105,6 +107,7 @@ function prevWord() {
         letterNumber = myDictionary.length - 1;
     }
     updateAll();
+    blink("#prevButton");
 };
 
 let prevButton = document.querySelector("#prevButton");
@@ -137,3 +140,12 @@ hebSwitch.addEventListener("click", hebSelect);
 let detailsSwitch = document.querySelector(".word-details");
 
 detailsSwitch.addEventListener("click", ()=>detailsSwitch.classList.toggle("hiddenDetails"));
+
+
+////////////////////////////
+//      blink effect      //
+////////////////////////////
+function blink(currentButton) {
+    document.querySelector(currentButton + ">div");
+    currentButton.classList.add('blink');
+}
