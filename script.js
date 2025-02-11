@@ -8,7 +8,7 @@ howMuchWords.textContent = "total: " + myDictionary.length;
 
 /////// Number of current word ///////
 let letterNumber;
-console.log(letterNumber);
+// console.log(letterNumber);
 
 let wordNumber = document.querySelector("#wordNumber");
 
@@ -177,15 +177,30 @@ function blink(currentButton, e) {
 let lockButton = document.querySelector(".lock-button");
 lockButton.addEventListener("pointerdown", lockWords);
 
+let currentPosition = "-"; // memory of switcher
+
 function lockWords() {
+    if(hebSwitch.classList.contains("hiddenWord") === true) {
+        currentPosition = "rus";
+    }
+    if(rusSwitch.classList.contains("hiddenWord") === true) {
+        currentPosition = "heb";
+    }
+
     lockButton.classList.toggle("lock-on");
 
     if(lock === false) {
+        // console.log(currentPosition);
         hebSwitch.classList.remove("hiddenWord");
         rusSwitch.classList.remove("hiddenWord");
         lock = true;
     } else {
-        hebSwitch.classList.add("hiddenWord");
+        // console.log(currentPosition);
+        if(currentPosition === "rus") {
+            hebSwitch.classList.add("hiddenWord");
+        } else {
+            rusSwitch.classList.add("hiddenWord");
+        }
         lock = false;
     }
 }
