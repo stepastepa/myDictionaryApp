@@ -89,6 +89,11 @@ body {
     cursor: pointer;
 
     display: flex;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    touch-action: manipulation;
 }
 .button>div {
     flex: 1 1 0;
