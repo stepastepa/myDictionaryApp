@@ -1,5 +1,6 @@
 import { myDictionary } from '/myDictionaryApp/dictionary.js';
 
+let lock = false;
 
 /////// How much words? ///////
 let howMuchWords = document.querySelector("#howMuchWords");
@@ -121,13 +122,17 @@ let rusSwitch = document.querySelector("#russian");
 let hebSwitch = document.querySelector("#hebrew");
 
 function rusSelect() {
-    hebSwitch.classList.add("hiddenWord");
-    rusSwitch.classList.remove("hiddenWord");
+    if(lock === false) {
+        hebSwitch.classList.add("hiddenWord");
+        rusSwitch.classList.remove("hiddenWord");
+    }
 }
 
 function hebSelect() {
-    rusSwitch.classList.add("hiddenWord");
-    hebSwitch.classList.remove("hiddenWord");
+    if(lock === false) {
+        rusSwitch.classList.add("hiddenWord");
+        hebSwitch.classList.remove("hiddenWord");
+    }
 }
 
 rusSwitch.addEventListener("pointerdown", rusSelect);
@@ -161,6 +166,26 @@ function blink(currentButton, e) {
         document.querySelector(".blink").removeChild(document.querySelector(".blink>span"));
         document.querySelector(".blink").classList.remove('blink');
     }
-    document.querySelector(currentButton + ">div").classList.add('blink');
+    document.querySelector(currentButton + ">div").classList.add("blink");
     document.querySelector(currentButton + ">div").appendChild(circle);
+}
+
+
+///////////////////////////
+//      lock button      //
+///////////////////////////
+let lockButton = document.querySelector(".lock-button");
+lockButton.addEventListener("pointerdown", lockWords);
+
+function lockWords() {
+    lockButton.classList.toggle("lock-on");
+
+    if(lock === false) {
+        hebSwitch.classList.remove("hiddenWord");
+        rusSwitch.classList.remove("hiddenWord");
+        lock = true;
+    } else {
+        hebSwitch.classList.add("hiddenWord");
+        lock = false;
+    }
 }
