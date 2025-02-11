@@ -58,9 +58,9 @@ body {
 #hebrew.hiddenWord {
     color: #fff;
 }
-#hebrew.hiddenWord:hover {
+/*#hebrew.hiddenWord:hover {
     color: red;
-}
+}*/ /* Safari blinking bug */
 
 #russian {
     color: #000;
@@ -68,9 +68,9 @@ body {
 #russian.hiddenWord {
     color: #fff;
 }
-#russian.hiddenWord:hover {
+/*#russian.hiddenWord:hover {
     color: red;
-}
+}*/ /* Safari blinking bug */
 
 .button-container {
     height: 30%;
