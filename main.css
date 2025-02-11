@@ -59,7 +59,7 @@ body {
     color: #fff;
 }
 #hebrew.hiddenWord:hover {
-    color: #000;
+    color: red;
 }
 
 #russian {
@@ -69,7 +69,7 @@ body {
     color: #fff;
 }
 #russian.hiddenWord:hover {
-    color: #000;
+    color: red;
 }
 
 .button-container {
@@ -93,7 +93,7 @@ body {
     user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    /*touch-action: manipulation;*/
+    touch-action: manipulation;
 }
 .button>div {
     flex: 1 1 0;
