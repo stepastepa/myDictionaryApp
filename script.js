@@ -72,7 +72,7 @@ function randomWord(e) {
 };
 
 let randomButton = document.querySelector("#randomButton");
-randomButton.addEventListener("click", (e)=>randomWord(e));
+randomButton.addEventListener("pointerdown", (e)=>randomWord(e));
 
 
 /////////////////////////////
@@ -93,7 +93,7 @@ function nextWord(e) {
 };
 
 let nextButton = document.querySelector("#nextButton");
-nextButton.addEventListener("click", (e)=>nextWord(e));
+nextButton.addEventListener("pointerdown", (e)=>nextWord(e));
 
 
 /////////////////////////////
@@ -111,7 +111,7 @@ function prevWord(e) {
 };
 
 let prevButton = document.querySelector("#prevButton");
-prevButton.addEventListener("click", (e)=>prevWord(e));
+prevButton.addEventListener("pointerdown", (e)=>prevWord(e));
 
 
 //////////////////////
@@ -130,8 +130,8 @@ function hebSelect() {
     hebSwitch.classList.remove("hiddenWord");
 }
 
-rusSwitch.addEventListener("click", rusSelect);
-hebSwitch.addEventListener("click", hebSelect);
+rusSwitch.addEventListener("pointerdown", rusSelect);
+hebSwitch.addEventListener("pointerdown", hebSelect);
 
 
 /////////////////////////////////
@@ -139,7 +139,7 @@ hebSwitch.addEventListener("click", hebSelect);
 /////////////////////////////////
 let detailsSwitch = document.querySelector(".word-details");
 
-detailsSwitch.addEventListener("click", ()=>detailsSwitch.classList.toggle("hiddenDetails"));
+detailsSwitch.addEventListener("pointerdown", ()=>detailsSwitch.classList.toggle("hiddenDetails"));
 
 
 ////////////////////////////
