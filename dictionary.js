@@ -529,10 +529,10 @@ const myDictionary = [
     { rus: 'говорят (они, жен.)', heb: 'מְדַבְּרוֹת', speak: 'мэдабрОт', type: 'женское, множественное' },
     
     ///////// 2025.03.09 /////////////////////////
-    { rus: 'есть, имеется (there is)', heb: 'יש', speak: 'йэщ', type: '-' },
-    { rus: 'нету, не имеется (there is no)', heb: 'אין', speak: 'эн', type: '-' },
-    { rus: '', heb: '', speak: '', type: '' },
-    { rus: '', heb: '', speak: '', type: '' },
+    { rus: 'есть, имеется (there is)', heb: 'יֵשׁ', speak: 'йэщ', type: '-' },
+    { rus: 'нету, не имеется (there is no)', heb: 'אֵין', speak: 'эн', type: '-' },
+    { rus: 'тебе, у тебя ... (муж.)', heb: 'לְךָ', speak: 'лэхА', type: 'мужской' },
+    { rus: 'тебе, у тебя ... (жен.)', heb: 'לָךְ', speak: 'лах', type: 'женский' }
 ];
 
 export { myDictionary };
