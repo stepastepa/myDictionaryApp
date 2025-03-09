@@ -531,8 +531,15 @@ const myDictionary = [
     ///////// 2025.03.09 /////////////////////////
     { rus: 'есть, имеется (there is)', heb: 'יֵשׁ', speak: 'йэщ', type: '-' },
     { rus: 'нету, не имеется (there is no)', heb: 'אֵין', speak: 'эн', type: '-' },
-    { rus: 'тебе, у тебя ... (муж.)', heb: 'לְךָ', speak: 'лэхА', type: 'мужской' },
-    { rus: 'тебе, у тебя ... (жен.)', heb: 'לָךְ', speak: 'лах', type: 'женский' }
+    { rus: 'мне (to me)', heb: 'לי', speak: 'лі', type: '-' },
+    { rus: 'тебе (to you)(муж.)', heb: 'לְךָ', speak: 'льэхА', type: 'мужской' },
+    { rus: 'тебе (to you)(жен.)', heb: 'לָךְ', speak: 'льах', type: 'женский' },
+    { rus: 'ему (to him)', heb: 'לוֹ', speak: 'льО', type: 'мужской' },
+    { rus: 'ей (to her)', heb: 'לָהּ', speak: 'льА', type: 'женский' },
+    { rus: 'этому (to it)', heb: 'לָזֶה', speak: 'льэзЭ', type: 'к предмету' },
+    { rus: 'нам (to us)', heb: 'לָנוּ', speak: 'лАну', type: 'множественное' },
+    { rus: 'им (to them)(муж.)', heb: 'לָהֶם', speak: 'льахЭм', type: 'мужское, множественное' },
+    { rus: 'им (to them)(жен.)', heb: 'לָהֶן', speak: 'льахЭн', type: 'женское, множественное' }
 ];
 
 export { myDictionary };
