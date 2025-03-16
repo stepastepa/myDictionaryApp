@@ -581,13 +581,31 @@ const myDictionary = [
     { rus: 'макароны', heb: 'פסטה', speak: 'пАста', type: '' },
     { rus: 'фрукт', heb: 'פרי', speak: 'пЭри', type: '' },
     { rus: 'завтрак', heb: 'ארוחת בוקר', speak: 'арухАт бОкер', type: '' },
-    { rus: 'обед (lunch)', heb: 'ארוחת צהריים', speak: 'арухАт цаhурАим', type: '' },
+    { rus: 'обед', heb: 'ארוחת צהריים', speak: 'арухАт цаhурАим', type: '' },
+    { rus: 'ужин', heb: 'ארוחת ערב', speak: 'арухАт Эрэв', type: '' },
     { rus: 'клубника', heb: 'תות', speak: '', type: '' },
     { rus: 'пиво', heb: 'בירה', speak: 'бИра', type: '' },
     { rus: 'суп', heb: 'מרק', speak: 'марАк', type: '' },
     { rus: 'сыр', heb: 'גבינה', speak: 'гвинА', type: '' },
     { rus: 'мясо', heb: 'בשר', speak: 'басАр', type: '' },
     { rus: 'помидор', heb: 'עגבניה', speak: 'агванийА', type: '' },
+
+    ///////// 2025.03.16 /////////////////////////
+    { rus: 'банан', heb: 'בננה', speak: 'банАна', type: '' },
+    { rus: 'лимон', heb: 'לימון', speak: 'лімОн', type: '' },
+    { rus: 'масло (жидкое)', heb: 'שמן', speak: 'щЭмэн', type: '' },
+    { rus: 'масло (твердое)', heb: 'חמאה', speak: 'хэмА', type: '' },
+    { rus: 'салат', heb: 'סלט', speak: 'салАт', type: '' },
+    { rus: 'голодный', heb: 'רעב', speak: 'раАв', type: '' },
+    { rus: 'соль', heb: 'מלח', speak: 'мэлАх', type: '' },
+    { rus: 'бутылка', heb: 'בקבוק', speak: 'бакбУк', type: '' },
+    { rus: 'говядина', heb: 'בקר', speak: 'бЭкэр', type: '' },
+    { rus: 'сэндвич', heb: 'כריך', speak: 'карИх', type: '' },
+    { rus: 'гриб', heb: 'פטרייה', speak: 'пітрійА', type: '' },
+    { rus: 'шоколад', heb: 'שוקולד', speak: 'щоколАд', type: '' },
+    { rus: 'ананас', heb: 'אננס', speak: 'Ананас', type: '' },
+    { rus: 'оливка, маслина', heb: 'זית', speak: 'зАит', type: '' },
+    { rus: 'пица', heb: 'פיצה', speak: 'пИца', type: '' },
 ];
 
 export { myDictionary };
