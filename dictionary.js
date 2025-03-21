@@ -622,7 +622,7 @@ const myDictionary = [
     { rus: 'лошадь', heb: 'סוס', speak: 'сус', type: '' },
     { rus: 'черепаха', heb: 'צב', speak: 'цав', type: '' },
     { rus: 'слон', heb: 'פיל', speak: 'пиль', type: '' },
-    { rus: 'селезень', heb: 'דרייק', speak: 'дрЭйк', type: 'мужской' },
+    { rus: 'селезень', heb: 'ברווז', speak: 'барвАз', type: 'мужской' },
     { rus: 'утка', heb: 'ברווז', speak: 'барвАз', type: 'женский' },
     { rus: 'птица', heb: 'ציפור', speak: 'ціпОр', type: '' },
     { rus: 'лев', heb: 'אריה', speak: 'арйЕ', type: '' },
