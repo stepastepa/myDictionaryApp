@@ -830,6 +830,8 @@ const myDictionary = [
     { rus: 'диваны', heb: 'סַפּוֹת', speak: 'сапОт', type: 'женский' },
     { rus: 'кресло', heb: 'כּוּרסָה', speak: 'курса', type: 'женский' },
     { rus: 'кресла', heb: 'כּוּרסָאוֹת', speak: 'курсаОт', type: 'женский' },
+    { rus: 'подушка', heb: 'כַּרִית', speak: 'карИт', type: 'женский' },
+    { rus: 'подушки', heb: 'כַּרִיּוֹת', speak: 'карийОт', type: 'женский' },
 ];
 
 export { myDictionary };
