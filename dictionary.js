@@ -909,6 +909,38 @@ const myDictionary = [
     
     { rus: 'нож', heb: 'סַכִּין', speak: 'сакИн', type: 'женский' },
     { rus: 'ножи', heb: 'סַכִּינִים', speak: 'сакинИм', type: 'женский' },
+
+    ///////// 2025.08.16 /////////////////////////
+    { rus: 'готовить еду, варить', heb: 'לְבַשֵּׁל', speak: 'лэвэшЭль', type: 'инфинитив' },
+    
+    { rus: 'печь, выпекать', heb: 'לֶאֱפוֹת', speak: 'лэофЭ', type: 'инфинитив' },
+    { rus: 'печёт, выпекает (м)', heb: 'אוֹפֶה', speak: 'офЭ', type: 'настоящее, мужское' },
+    { rus: 'печёт, выпекает (ж)', heb: 'אוֹפָה', speak: 'офА', type: 'настоящее, женское' },
+
+    { rus: 'ложка', heb: 'כַּף', speak: 'каф', type: 'женский' },
+    { rus: 'ложки', heb: 'כַּפוֹת', speak: 'кафОт', type: 'множественное' },
+    
+    { rus: 'чайная ложка', heb: 'כַּפִּית', speak: 'капИт', type: 'женский' },
+    { rus: 'чайные ложки', heb: 'כַּפִּיּוֹת', speak: 'капийОт', type: 'множественное' },
+    
+    
+    { rus: 'жаждущий', heb: 'צָמֵא', speak: 'цамЭ', type: 'мужской' },
+    { rus: 'жаждущая', heb: 'צְמֵאָה', speak: 'цмэА', type: 'женский' },
+    
+    { rus: '', heb: '', speak: '', type: '' },
+    { rus: '', heb: '', speak: '', type: '' },
+    { rus: '', heb: '', speak: '', type: '' },
+    { rus: '', heb: '', speak: '', type: '' },
+    { rus: '', heb: '', speak: '', type: '' },
+    { rus: '', heb: '', speak: '', type: '' },
+    { rus: '', heb: '', speak: '', type: '' },
+    { rus: '', heb: '', speak: '', type: '' },
+    { rus: '', heb: '', speak: '', type: '' },
+    { rus: '', heb: '', speak: '', type: '' },
+    { rus: '', heb: '', speak: '', type: '' },
+    { rus: '', heb: '', speak: '', type: '' },
+    { rus: '', heb: '', speak: '', type: '' },
+    { rus: '', heb: '', speak: '', type: '' },
 ];
 
 export { myDictionary };
