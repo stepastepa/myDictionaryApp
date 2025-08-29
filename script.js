@@ -1,4 +1,5 @@
 import { myDictionary } from '/myDictionaryApp/dictionary.js';
+// import { myDictionary } from '/dictionary.js';
 
 let lock = false;
 

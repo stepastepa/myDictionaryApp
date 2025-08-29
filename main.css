@@ -234,3 +234,24 @@ body {
     opacity: 1;
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>') 0 / auto 100%;
 }
+
+#listOfWords {
+    font-size: 1rem;
+    padding: 1rem;
+    list-style: none;
+}
+#listOfWords li span:last-child {
+    font-weight: bold;
+    margin-left: 1rem;
+    color: deeppink;
+}
+.big-letter {
+    font-size: 3rem;
+}
+.info-container a,
+.info-container a:visited {
+    text-align: left;
+    color: #fff;
+    font-size: 0.5rem;
+    padding: 0.25rem;
+}
