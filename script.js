@@ -1,6 +1,11 @@
 import { myDictionary } from '/myDictionaryApp/dictionary.js';
 // import { myDictionary } from '/dictionary.js';
 
+/////// url parameters ///////
+const params = new URLSearchParams(window.location.search);
+const wordIndex = params.get("index");
+//////////////////////////////
+
 let lock = false;
 
 /////// How much words? ///////
@@ -205,3 +210,16 @@ function lockWords() {
         lock = false;
     }
 }
+
+///////////////////////////////////////
+//      if url parameter exists      //
+///////////////////////////////////////
+
+function checkUrlParameter() {
+    if (wordIndex) {
+        letterNumber = +wordIndex;
+        updateAll();
+    }
+};
+
+window.addEventListener("load", checkUrlParameter);

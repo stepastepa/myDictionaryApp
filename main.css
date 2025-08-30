@@ -239,6 +239,7 @@ body {
     font-size: 1rem;
     padding: 1rem;
     list-style: none;
+    color: #000;
 }
 #listOfWords li span:last-child {
     font-weight: bold;
@@ -254,4 +255,9 @@ body {
     color: #fff;
     font-size: 0.5rem;
     padding: 0.25rem;
+}
+#listOfWords a,
+#listOfWords a:visited {
+    text-decoration: none;
+    color: unset;
 }

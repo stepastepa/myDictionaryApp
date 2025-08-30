@@ -1,6 +1,10 @@
 import { myDictionary } from '/myDictionaryApp/dictionary.js';
 // import { myDictionary } from '/dictionary.js';
 
+for (let i=0; i<myDictionary.length; i++) {
+  myDictionary[i].index = i;
+}
+
 let alhabeticalArray = [];
 
 let listOfWords = document.querySelector("#listOfWords");
@@ -26,8 +30,10 @@ function createList(list) {
 
     listOfWords.innerHTML += `
       <li>
-        <span>${alhabeticalArray[i].rus}</span>
-        <span>${alhabeticalArray[i].heb}</span>
+        <a href='./index.html?index=${alhabeticalArray[i].index}'>
+          <span>${alhabeticalArray[i].rus}</span>
+          <span>${alhabeticalArray[i].heb}</span>
+        </a>
       </li>
     `;
   }
