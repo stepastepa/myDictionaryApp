@@ -252,6 +252,8 @@ function repeatWords() {
     console.log(myDictionary);
     if (letterNumber >= myDictionary.length) {
         letterNumber = 0;
+    } else if (letterNumber === undefined) {
+        letterNumber = Math.floor(Math.random() * myDictionaryFull.length);
     }
     // console.log(letterNumber);
     updateCurrentNumber();
@@ -266,7 +268,7 @@ function getRandomElements(arr, count = 9) {
     const usedIndices = new Set();
 
     // show current word
-    let initialIndex = letterNumber?letterNumber:Math.floor(Math.random() * arr.length);
+    let initialIndex = letterNumber;
     usedIndices.add(initialIndex);
     result.push(arr[initialIndex]);
 
