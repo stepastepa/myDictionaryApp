@@ -1,4 +1,4 @@
-const myDictionary = [
+const myDictionaryFull = [
     ///////// 2018.11.09 /////////////////////////
     { rus: 'папа', heb: 'אַבָּא', speak: 'Аба', type: 'мужской' },
     { rus: 'пришёл', heb: 'בָּא', speak: 'ба', type: 'мужской' },
@@ -1154,4 +1154,4 @@ const myDictionary = [
     { rus: 'подтверждения, разрешения', heb: 'אישורים', speak: 'ишурИм', type: 'множественное' },
 ];
 
-export { myDictionary };
+export { myDictionaryFull };

@@ -1,5 +1,8 @@
-import { myDictionary } from '/myDictionaryApp/dictionary.js';
-// import { myDictionary } from '/dictionary.js';
+import { myDictionaryFull } from '/myDictionaryApp/dictionary.js';
+// import { myDictionaryFull } from '/dictionary.js';
+
+// initial full dictionary
+let myDictionary = myDictionaryFull;
 
 for (let i=0; i<myDictionary.length; i++) {
   myDictionary[i].index = i;

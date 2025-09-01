@@ -1,5 +1,8 @@
-import { myDictionary } from '/myDictionaryApp/dictionary.js';
-// import { myDictionary } from '/dictionary.js';
+import { myDictionaryFull } from '/myDictionaryApp/dictionary.js';
+// import { myDictionaryFull } from '/dictionary.js';
+
+// initial full dictionary
+let myDictionary = myDictionaryFull;
 
 /////// url parameters ///////
 const params = new URLSearchParams(window.location.search);
@@ -7,10 +10,14 @@ const wordIndex = params.get("index");
 //////////////////////////////
 
 let lock = false;
+let memoryLock = false;
 
 /////// How much words? ///////
 let howMuchWords = document.querySelector("#howMuchWords");
-howMuchWords.textContent = "total: " + myDictionary.length;
+function showFullLength() {
+    howMuchWords.textContent = "total: " + myDictionary.length;
+}
+showFullLength();
 
 /////// Number of current word ///////
 let letterNumber;
@@ -223,3 +230,54 @@ function checkUrlParameter() {
 };
 
 window.addEventListener("load", checkUrlParameter);
+
+///////////////////////////////////////
+//      random 10 repeat button      //
+///////////////////////////////////////
+let memoryButton = document.querySelector(".memory-button");
+memoryButton.addEventListener("pointerdown", repeatWords);
+
+function repeatWords() {
+    memoryButton.classList.toggle("lock-on");
+
+    if(memoryLock === true) {
+        myDictionary = myDictionaryFull;
+        memoryLock = false;
+    } else {
+        myDictionary = getRandomElements(myDictionaryFull, 10);
+        memoryLock = true;
+    }
+
+    console.log(myDictionary);
+    if (letterNumber >= myDictionary.length) {
+        letterNumber = 0;
+    }
+    // console.log(letterNumber);
+    updateCurrentNumber();
+    updateAll();
+    showFullLength();
+}
+
+//////////////////////////////////////////
+
+function getRandomElements(arr, count = 10) {
+  const result = [];
+  const usedIndices = new Set();
+
+  while (result.length < count && result.length < arr.length) {
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    if (!usedIndices.has(randomIndex)) {
+      usedIndices.add(randomIndex);
+      result.push(arr[randomIndex]);
+    }
+  }
+
+  return result;
+}
+
+// Пример
+// const bigArray = Array.from({ length: 1000000 }, (_, i) => i + 1); // массив от 1 до 1 000 000
+// const randomTen = getRandomElements(bigArray, 10);
+// console.log(randomTen);
+
+//////////////////////////////////////////
