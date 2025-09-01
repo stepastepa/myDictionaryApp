@@ -1,5 +1,5 @@
-import { myDictionaryFull } from '/myDictionaryApp/dictionary.js';
-// import { myDictionaryFull } from '/dictionary.js';
+// import { myDictionaryFull } from '/myDictionaryApp/dictionary.js';
+import { myDictionaryFull } from '/dictionary.js';
 
 // initial full dictionary
 let myDictionary = myDictionaryFull;
@@ -245,20 +245,19 @@ function repeatWords() {
         memoryLock = false;
         letterNumber = 0;
     } else {
+        if (letterNumber === undefined) {
+            letterNumber = Math.floor(Math.random() * myDictionaryFull.length);
+        }
         myDictionary = getRandomElements(myDictionaryFull, 10);
         memoryLock = true;
+        letterNumber = 0;
     }
 
     console.log(myDictionary);
-    if (letterNumber >= myDictionary.length) {
-        letterNumber = 0;
-    } else if (letterNumber === undefined) {
-        letterNumber = Math.floor(Math.random() * myDictionaryFull.length);
-    }
-    // console.log(letterNumber);
+    console.log(letterNumber);
     updateCurrentNumber();
-    updateAll();
     showFullLength();
+    updateAll();
 }
 
 //////////////////////////////////////////
