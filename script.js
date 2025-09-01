@@ -243,6 +243,7 @@ function repeatWords() {
     if(memoryLock === true) {
         myDictionary = myDictionaryFull;
         memoryLock = false;
+        letterNumber = 0;
     } else {
         myDictionary = getRandomElements(myDictionaryFull, 10);
         memoryLock = true;
