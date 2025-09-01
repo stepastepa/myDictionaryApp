@@ -1,5 +1,5 @@
-import { myDictionaryFull } from '/myDictionaryApp/dictionary.js';
-// import { myDictionaryFull } from '/dictionary.js';
+// import { myDictionaryFull } from '/myDictionaryApp/dictionary.js';
+import { myDictionaryFull } from '/dictionary.js';
 
 // initial full dictionary
 let myDictionary = myDictionaryFull;
@@ -260,19 +260,24 @@ function repeatWords() {
 
 //////////////////////////////////////////
 
-function getRandomElements(arr, count = 10) {
-  const result = [];
-  const usedIndices = new Set();
+function getRandomElements(arr, count = 9) {
+    const result = [];
+    const usedIndices = new Set();
 
-  while (result.length < count && result.length < arr.length) {
-    const randomIndex = Math.floor(Math.random() * arr.length);
-    if (!usedIndices.has(randomIndex)) {
-      usedIndices.add(randomIndex);
-      result.push(arr[randomIndex]);
+    // show current word
+    let initialIndex = letterNumber>0?letterNumber:Math.floor(Math.random() * arr.length);
+    usedIndices.add(initialIndex);
+    result.push(arr[initialIndex]);
+
+    while (result.length < count && result.length < arr.length) {
+        const randomIndex = Math.floor(Math.random() * arr.length);
+        if (!usedIndices.has(randomIndex)) {
+            usedIndices.add(randomIndex);
+            result.push(arr[randomIndex]);
+        }
     }
-  }
 
-  return result;
+    return result;
 }
 
 // Пример
