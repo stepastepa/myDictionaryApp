@@ -223,8 +223,8 @@ body {
     align-items: center;
 }
 .memory-button {
-    top: 5%;
-    left: 5%;
+    top: 30px;
+    left: 30px;
 }
 .lock-icon, .memory-icon {
     width: 24px;
