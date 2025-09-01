@@ -266,7 +266,7 @@ function getRandomElements(arr, count = 9) {
     const usedIndices = new Set();
 
     // show current word
-    let initialIndex = letterNumber>0?letterNumber:Math.floor(Math.random() * arr.length);
+    let initialIndex = letterNumber?letterNumber:Math.floor(Math.random() * arr.length);
     usedIndices.add(initialIndex);
     result.push(arr[initialIndex]);
 
