@@ -6,8 +6,9 @@
     padding: 0;
 }
 
-html, body {
-    height: 100%;
+body {
+    height: 100vh;
+    height: 100dvh;
 }
 
 html {
@@ -247,11 +248,20 @@ body {
     opacity: 1;
 }
 
+body.list {
+    padding: 1rem;
+    height: unset;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
 #listOfWords {
     font-size: 1rem;
-    padding: 1rem;
     list-style: none;
     color: #000;
+}
+#listOfWords:has(.hebrew){
+    text-align: right;
 }
 #listOfWords li span:last-child {
     font-weight: bold;
@@ -272,4 +282,19 @@ body {
 #listOfWords a:visited {
     text-decoration: none;
     color: unset;
+}
+
+.switcher {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 0 2px #000;
+    cursor: pointer;
+}
+.switcher .rus, .switcher .heb {
+    padding: 0.5rem 1rem;
+}
+.switcher .active {
+    background-color: #000;
+    color: #fff;
 }
