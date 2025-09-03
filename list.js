@@ -13,7 +13,7 @@ let alhabeticalArrayRus = [];
 
 const listOfWords = document.querySelector("#listOfWords");
 
-function createRusList(alhabeticalArrayRus) {
+function createRusList() {
   if(alhabeticalArrayRus.length === 0) {
       alhabeticalArrayRus = [...myDictionary].sort((a, b) => {
       return a.rus.localeCompare(b.rus, 'ru');
@@ -44,7 +44,7 @@ function createRusList(alhabeticalArrayRus) {
   }
 }
 
-function createHebList(alhabeticalArrayHeb) {
+function createHebList() {
   if(alhabeticalArrayHeb.length === 0) {
     alhabeticalArrayHeb = [...myDictionary].sort((a, b) => {
       return a.heb.localeCompare(b.heb, 'he');
