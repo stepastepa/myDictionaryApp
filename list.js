@@ -13,61 +13,61 @@ let alhabeticalArrayRus = [];
 
 const listOfWords = document.querySelector("#listOfWords");
 
-function createRusList(list) {
-  if(list.length === 0) {
-      list = [...myDictionary].sort((a, b) => {
+function createRusList(alhabeticalArrayRus) {
+  if(alhabeticalArrayRus.length === 0) {
+      alhabeticalArrayRus = [...myDictionary].sort((a, b) => {
       return a.rus.localeCompare(b.rus, 'ru');
     });
   }
   
 
-  for (let i = 0; i < list.length; i++) {
-    let firstLetter = list[i].rus[0].toLowerCase();
-    let previousFirstLetter = i!==0?list[i-1].rus[0].toLowerCase():1;
+  for (let i = 0; i < alhabeticalArrayRus.length; i++) {
+    let firstLetter = alhabeticalArrayRus[i].rus[0].toLowerCase();
+    let previousFirstLetter = i!==0?alhabeticalArrayRus[i-1].rus[0].toLowerCase():1;
 
     if (firstLetter !== previousFirstLetter) {
       listOfWords.innerHTML += `
         <li class='big-letter'>
-          <span>${list[i].rus[0]}</span>
+          <span>${alhabeticalArrayRus[i].rus[0]}</span>
         </li>
       `;
     }
 
     listOfWords.innerHTML += `
       <li>
-        <a href='./index.html?index=${list[i].index}'>
-          <span>${list[i].rus}</span>
-          <span>${list[i].heb}</span>
+        <a href='./index.html?index=${alhabeticalArrayRus[i].index}'>
+          <span>${alhabeticalArrayRus[i].rus}</span>
+          <span>${alhabeticalArrayRus[i].heb}</span>
         </a>
       </li>
     `;
   }
 }
 
-function createHebList(list) {
-  if(list.length === 0) {
-    list = [...myDictionary].sort((a, b) => {
+function createHebList(alhabeticalArrayHeb) {
+  if(alhabeticalArrayHeb.length === 0) {
+    alhabeticalArrayHeb = [...myDictionary].sort((a, b) => {
       return a.heb.localeCompare(b.heb, 'he');
     });
   }
 
-  for (let i = 0; i < list.length; i++) {
-    let firstLetter = list[i].heb[0].toLowerCase();
-    let previousFirstLetter = i!==0?list[i-1].heb[0].toLowerCase():1;
+  for (let i = 0; i < alhabeticalArrayHeb.length; i++) {
+    let firstLetter = alhabeticalArrayHeb[i].heb[0].toLowerCase();
+    let previousFirstLetter = i!==0?alhabeticalArrayHeb[i-1].heb[0].toLowerCase():1;
 
     if (firstLetter !== previousFirstLetter) {
       listOfWords.innerHTML += `
         <li class='big-letter'>
-          <span>${list[i].heb[0]}</span>
+          <span>${alhabeticalArrayHeb[i].heb[0]}</span>
         </li>
       `;
     }
 
     listOfWords.innerHTML += `
       <li class='hebrew'>
-        <a href='./index.html?index=${list[i].index}'>
-          <span>${list[i].rus}</span>
-          <span>${list[i].heb}</span>
+        <a href='./index.html?index=${alhabeticalArrayHeb[i].index}'>
+          <span>${alhabeticalArrayHeb[i].rus}</span>
+          <span>${alhabeticalArrayHeb[i].heb}</span>
         </a>
       </li>
     `;
@@ -75,7 +75,7 @@ function createHebList(list) {
 }
 
 listOfWords.innerHTML = ''; // reset
-createRusList(alhabeticalArrayRus);
+createRusList();
 
 ////////////////////
 //    switcher    //
@@ -90,8 +90,8 @@ function switchList() {
   listOfWords.innerHTML = ''; // reset
 
   if(this.querySelector('.rus').classList.contains('active')) {
-    createRusList(alhabeticalArrayRus);
+    createRusList();
   } else if(this.querySelector('.heb').classList.contains('active')) {
-    createHebList(alhabeticalArrayHeb);
+    createHebList();
   }
 }
