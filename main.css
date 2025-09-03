@@ -255,15 +255,18 @@ body.list {
     min-height: 100dvh;
 }
 
-#listOfWords {
+#lists ul:not(.active) {
+    display: none;
+}
+#lists ul {
     font-size: 1rem;
     list-style: none;
     color: #000;
 }
-#listOfWords:has(.hebrew){
+#lists ul:has(.hebrew){
     text-align: right;
 }
-#listOfWords li span:last-child {
+#lists li span:last-child {
     font-weight: bold;
     margin-left: 1rem;
     color: deeppink;
@@ -278,8 +281,8 @@ body.list {
     font-size: 0.5rem;
     padding: 0.25rem;
 }
-#listOfWords a,
-#listOfWords a:visited {
+#lists a,
+#lists a:visited {
     text-decoration: none;
     color: unset;
 }

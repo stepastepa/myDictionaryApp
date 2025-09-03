@@ -1,5 +1,5 @@
-import { myDictionaryFull } from '/myDictionaryApp/dictionary.js';
-// import { myDictionaryFull } from '/dictionary.js';
+// import { myDictionaryFull } from '/myDictionaryApp/dictionary.js';
+import { myDictionaryFull } from '/dictionary.js';
 
 // initial full dictionary
 let myDictionary = myDictionaryFull;
@@ -11,7 +11,8 @@ for (let i=0; i<myDictionary.length; i++) {
 let alhabeticalArrayHeb = [];
 let alhabeticalArrayRus = [];
 
-const listOfWords = document.querySelector("#listOfWords");
+const rusList = document.querySelector("#lists #rusList");
+const hebList = document.querySelector("#lists #hebList");
 
 function createRusList() {
   if(alhabeticalArrayRus.length === 0) {
@@ -19,21 +20,22 @@ function createRusList() {
       return a.rus.localeCompare(b.rus, 'ru');
     });
   }
-  
+
+  if (rusList.getElementsByTagName("li").length > 0) return; // cancel
 
   for (let i = 0; i < alhabeticalArrayRus.length; i++) {
     let firstLetter = alhabeticalArrayRus[i].rus[0].toLowerCase();
     let previousFirstLetter = i!==0?alhabeticalArrayRus[i-1].rus[0].toLowerCase():1;
 
     if (firstLetter !== previousFirstLetter) {
-      listOfWords.innerHTML += `
+      rusList.innerHTML += `
         <li class='big-letter'>
           <span>${alhabeticalArrayRus[i].rus[0]}</span>
         </li>
       `;
     }
 
-    listOfWords.innerHTML += `
+    rusList.innerHTML += `
       <li>
         <a href='./index.html?index=${alhabeticalArrayRus[i].index}'>
           <span>${alhabeticalArrayRus[i].rus}</span>
@@ -51,19 +53,21 @@ function createHebList() {
     });
   }
 
+  if (hebList.getElementsByTagName("li").length > 0) return; // cancel
+
   for (let i = 0; i < alhabeticalArrayHeb.length; i++) {
     let firstLetter = alhabeticalArrayHeb[i].heb[0].toLowerCase();
     let previousFirstLetter = i!==0?alhabeticalArrayHeb[i-1].heb[0].toLowerCase():1;
 
     if (firstLetter !== previousFirstLetter) {
-      listOfWords.innerHTML += `
+      hebList.innerHTML += `
         <li class='big-letter'>
           <span>${alhabeticalArrayHeb[i].heb[0]}</span>
         </li>
       `;
     }
 
-    listOfWords.innerHTML += `
+    hebList.innerHTML += `
       <li class='hebrew'>
         <a href='./index.html?index=${alhabeticalArrayHeb[i].index}'>
           <span>${alhabeticalArrayHeb[i].rus}</span>
@@ -74,7 +78,8 @@ function createHebList() {
   }
 }
 
-listOfWords.innerHTML = ''; // reset
+rusList.innerHTML = ''; // reset
+hebList.innerHTML = ''; // reset
 createRusList();
 
 ////////////////////
@@ -86,8 +91,8 @@ switcher.addEventListener("click", switchList);
 function switchList() {
   this.querySelector('.rus').classList.toggle('active');
   this.querySelector('.heb').classList.toggle('active');
-
-  listOfWords.innerHTML = ''; // reset
+  rusList.classList.toggle('active');
+  hebList.classList.toggle('active');
 
   if(this.querySelector('.rus').classList.contains('active')) {
     createRusList();
