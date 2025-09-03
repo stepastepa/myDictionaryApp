@@ -14,9 +14,12 @@ let alhabeticalArrayRus = [];
 const listOfWords = document.querySelector("#listOfWords");
 
 function createRusList(list) {
-  list = [...myDictionary].sort((a, b) => {
-    return a.rus.localeCompare(b.rus, 'ru');
-  });
+  if(list.length === 0) {
+      list = [...myDictionary].sort((a, b) => {
+      return a.rus.localeCompare(b.rus, 'ru');
+    });
+  }
+  
 
   for (let i = 0; i < list.length; i++) {
     let firstLetter = list[i].rus[0].toLowerCase();
@@ -42,9 +45,11 @@ function createRusList(list) {
 }
 
 function createHebList(list) {
-  list = [...myDictionary].sort((a, b) => {
-    return a.heb.localeCompare(b.heb, 'he');
-  });
+  if(list.length === 0) {
+    list = [...myDictionary].sort((a, b) => {
+      return a.heb.localeCompare(b.heb, 'he');
+    });
+  }
 
   for (let i = 0; i < list.length; i++) {
     let firstLetter = list[i].heb[0].toLowerCase();
