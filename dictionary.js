@@ -1217,6 +1217,9 @@ const myDictionaryFull = [
 
     { rus: 'бумага', heb: 'נייר', speak: 'нийАр', type: 'мужской' },
     { rus: 'бумага (много)', heb: 'ניירות', speak: 'нейарОт', type: 'множественное' },
+
+    { rus: 'здание, строение', heb: 'בניין', speak: 'биньЯн', type: 'мужской' },
+    { rus: 'здания, строения', heb: 'בניין', speak: 'биньанИм', type: 'множественное' },
 ];
 
 export { myDictionaryFull };
