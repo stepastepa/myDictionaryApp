@@ -1246,6 +1246,16 @@ const myDictionaryFull = [
     { rus: 'слои, прослойки', heb: 'שִׁכְבוֹת', speak: 'шихвОт', type: 'множественное' },
 
     { rus: 'нос', heb: 'אף', speak: 'аф', type: '' },
+
+    ///////// 2025.09.07 /////////////////////////
+    { rus: 'от, из', heb: 'מ־', speak: 'ме- / ми-', type: '-' },
+    { rus: 'к, для', heb: 'ל־', speak: 'ле-', type: '-' },
+    { rus: 'в, внутри, на', heb: 'ב־', speak: 'бэ-', type: '-' },
+    { rus: 'как, подобно', heb: 'כ־', speak: 'кэ-', type: '-' },
+    { rus: 'с (совместность)', heb: 'עִם', speak: 'им', type: '-' },
+    { rus: 'на, о, над', heb: 'עַל', speak: 'аль', type: '-' },
+    { rus: 'к, в сторону', heb: 'אֵל', speak: 'эль', type: '-' },
+    { rus: 'от, из (полная форма מ)', heb: 'מִן', speak: 'мин', type: '-' },
 ];
 
 export { myDictionaryFull };
