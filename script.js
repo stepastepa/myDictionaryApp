@@ -75,6 +75,8 @@ function randomNumber() {
 }
 
 function randomWord(e) {
+    e.preventDefault();
+
     let numberPrev = letterNumber;
     randomNumber();
     while(numberPrev == letterNumber) {
@@ -86,13 +88,15 @@ function randomWord(e) {
 };
 
 let randomButton = document.querySelector("#randomButton");
-randomButton.addEventListener("pointerdown", (e)=>randomWord(e));
+randomButton.addEventListener("pointerdown", (e)=>randomWord(e), { passive: false });
 
 
 /////////////////////////////
 //        Next button      //
 /////////////////////////////
 function nextWord(e) {
+    e.preventDefault();
+
     if (letterNumber !== undefined) {
         letterNumber++;
     }
@@ -107,13 +111,15 @@ function nextWord(e) {
 };
 
 let nextButton = document.querySelector("#nextButton");
-nextButton.addEventListener("pointerdown", (e)=>nextWord(e));
+nextButton.addEventListener("pointerdown", (e)=>nextWord(e), { passive: false });
 
 
 /////////////////////////////
 //      Previous button    //
 /////////////////////////////
 function prevWord(e) {
+    e.preventDefault();
+    
     if (letterNumber !== undefined) {
         letterNumber--;
     }
@@ -125,7 +131,7 @@ function prevWord(e) {
 };
 
 let prevButton = document.querySelector("#prevButton");
-prevButton.addEventListener("pointerdown", (e)=>prevWord(e));
+prevButton.addEventListener("pointerdown", (e)=>prevWord(e), { passive: false });
 
 
 //////////////////////
@@ -286,12 +292,3 @@ function getRandomElements(arr, count = 9) {
 // const bigArray = Array.from({ length: 1000000 }, (_, i) => i + 1); // массив от 1 до 1 000 000
 // const randomTen = getRandomElements(bigArray, 10);
 // console.log(randomTen);
-
-
-////////////////////////////////////////////////
-//     ZOOM prevention on mobile devices      //
-////////////////////////////////////////////////
-
-document.addEventListener('touchend', function (e) {
-  e.preventDefault();
-}, { passive: false });
