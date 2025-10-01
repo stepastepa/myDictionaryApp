@@ -300,4 +300,4 @@ document.addEventListener('touchend', function (e) {
     e.preventDefault();
   }
   lastTouch = now;
-}, false);
+}, { passive: false });
