@@ -287,4 +287,17 @@ function getRandomElements(arr, count = 9) {
 // const randomTen = getRandomElements(bigArray, 10);
 // console.log(randomTen);
 
-//////////////////////////////////////////
+
+////////////////////////////////////////////////
+//     ZOOM prevention on mobile devices      //
+////////////////////////////////////////////////
+
+let lastTouch = 0;
+
+document.addEventListener('touchend', function (e) {
+  const now = Date.now();
+  if (now - lastTouch <= 300) {
+    e.preventDefault();
+  }
+  lastTouch = now;
+}, false);
