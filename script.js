@@ -268,6 +268,8 @@ function repeatWords() {
 
 //////////////////////////////////////////
 
+/*
+// current word + 9 random words:
 function getRandomElements(arr, count = 9) {
     const result = [];
     const usedIndices = new Set();
@@ -292,3 +294,36 @@ function getRandomElements(arr, count = 9) {
 // const bigArray = Array.from({ length: 1000000 }, (_, i) => i + 1); // массив от 1 до 1 000 000
 // const randomTen = getRandomElements(bigArray, 10);
 // console.log(randomTen);
+*/
+
+// current word + 9 words from 9 parts:
+function getRandomElements(arr, count = 9) {
+    const result = [];
+    const usedIndices = new Set();
+
+    // Добавляем "текущее" слово
+    let initialIndex = letterNumber;
+    usedIndices.add(initialIndex);
+    result.push(arr[initialIndex]);
+
+    // Вычисляем, сколько частей нужно
+    const parts = count;
+    const segmentSize = Math.floor(arr.length / parts);
+
+    for (let i = 0; i < parts; i++) {
+        // Находим диапазон текущего сегмента
+        const start = i * segmentSize;
+        const end = (i === parts - 1) ? arr.length : start + segmentSize;
+
+        // Берем случайный индекс из этого диапазона
+        let randomIndex;
+        do {
+            randomIndex = Math.floor(Math.random() * (end - start)) + start;
+        } while (usedIndices.has(randomIndex));
+
+        usedIndices.add(randomIndex);
+        result.push(arr[randomIndex]);
+    }
+
+    return result;
+}
