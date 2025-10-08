@@ -307,7 +307,7 @@ function getRandomElements(arr, count = 9) {
     result.push(arr[initialIndex]);
 
     // Вычисляем, сколько частей нужно
-    const parts = count;
+    const parts = count - 1; // первое слово уже выбрано
     const segmentSize = Math.floor(arr.length / parts);
 
     for (let i = 0; i < parts; i++) {
