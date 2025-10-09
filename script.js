@@ -251,9 +251,9 @@ function repeatWords() {
         memoryLock = false;
         letterNumber = 0;
     } else {
-        if (letterNumber === undefined) {
-            letterNumber = Math.floor(Math.random() * myDictionaryFull.length);
-        }
+        // if (letterNumber === undefined) {
+        //     letterNumber = Math.floor(Math.random() * myDictionaryFull.length);
+        // }
         myDictionary = getRandomElements(myDictionaryFull, 10);
         memoryLock = true;
         letterNumber = 0;
@@ -303,17 +303,21 @@ function getRandomElements(arr, count = 9) {
 
     // Добавляем "текущее" слово
     let initialIndex = letterNumber;
-    usedIndices.add(initialIndex);
-    result.push(arr[initialIndex]);
 
     // Вычисляем, сколько частей нужно
-    const parts = count - 1; // первое слово уже выбрано
+    const parts = count; // первое слово уже выбрано
+    if (initialIndex !== undefined) {
+        usedIndices.add(initialIndex);
+        result.push(arr[initialIndex]);
+    } else {
+        parts = count + 1; // первое слово не выбрано
+    }
     const segmentSize = Math.floor(arr.length / parts);
 
-    for (let i = 0; i < parts; i++) {
+    for (let i = 0; i < parts-1; i++) {
         // Находим диапазон текущего сегмента
         const start = i * segmentSize;
-        const end = (i === parts - 1) ? arr.length : start + segmentSize;
+        const end = (i === parts-1) ? arr.length : start + segmentSize; // 0-8 (9шт) или 0-9 (10шт)
 
         // Берем случайный индекс из этого диапазона
         let randomIndex;
