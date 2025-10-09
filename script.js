@@ -314,7 +314,7 @@ function getRandomElements(arr, count) {
     }
     const segmentSize = Math.floor(arr.length / parts);
 
-    for (let i = 0; i < parts-1; i++) {
+    for (let i = 0; i < parts; i++) {
         // Находим диапазон текущего сегмента
         const start = i * segmentSize;
         const end = (i === parts-1) ? arr.length : start + segmentSize; // 0-8 (9шт) или 0-9 (10шт)
