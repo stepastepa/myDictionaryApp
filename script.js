@@ -305,7 +305,7 @@ function getRandomElements(arr, count) {
     let initialIndex = letterNumber;
 
     // Вычисляем, сколько частей нужно
-    const parts = count - 1; // первое слово уже выбрано (9шт)
+    let parts = count - 1; // первое слово уже выбрано (9шт)
     if (initialIndex !== undefined) {
         usedIndices.add(initialIndex);
         result.push(arr[initialIndex]);
