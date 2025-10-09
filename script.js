@@ -11,6 +11,7 @@ const wordIndex = params.get("index");
 
 let lock = false;
 let memoryLock = false;
+let tempMemoryIndexes = [];
 
 /////// How much words? ///////
 let howMuchWords = document.querySelector("#howMuchWords");
@@ -249,7 +250,7 @@ function repeatWords() {
     if(memoryLock === true) {
         myDictionary = myDictionaryFull;
         memoryLock = false;
-        letterNumber = 0;
+        letterNumber = tempMemoryIndexes[letterNumber]; // retrieve global index from memory
     } else {
         // if (letterNumber === undefined) {
         //     letterNumber = Math.floor(Math.random() * myDictionaryFull.length);
@@ -300,6 +301,7 @@ function getRandomElements(arr, count = 9) {
 function getRandomElements(arr, count) {
     const result = [];
     const usedIndices = new Set();
+    tempMemoryIndexes = []; // reset memory array
 
     // Добавляем "текущее" слово
     let initialIndex = letterNumber;
@@ -309,6 +311,7 @@ function getRandomElements(arr, count) {
     if (initialIndex !== undefined) {
         usedIndices.add(initialIndex);
         result.push(arr[initialIndex]);
+        tempMemoryIndexes.push(initialIndex);
     } else {
         parts = count; // первое слово не выбрано (10шт)
     }
@@ -327,6 +330,7 @@ function getRandomElements(arr, count) {
 
         usedIndices.add(randomIndex);
         result.push(arr[randomIndex]);
+        tempMemoryIndexes.push(randomIndex);
     }
 
     return result;
