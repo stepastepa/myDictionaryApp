@@ -297,7 +297,7 @@ function getRandomElements(arr, count = 9) {
 */
 
 // current word + 9 words from 9 parts:
-function getRandomElements(arr, count = 9) {
+function getRandomElements(arr, count) {
     const result = [];
     const usedIndices = new Set();
 
@@ -305,12 +305,12 @@ function getRandomElements(arr, count = 9) {
     let initialIndex = letterNumber;
 
     // Вычисляем, сколько частей нужно
-    const parts = count; // первое слово уже выбрано
+    const parts = count - 1; // первое слово уже выбрано (9шт)
     if (initialIndex !== undefined) {
         usedIndices.add(initialIndex);
         result.push(arr[initialIndex]);
     } else {
-        parts = count + 1; // первое слово не выбрано
+        parts = count; // первое слово не выбрано (10шт)
     }
     const segmentSize = Math.floor(arr.length / parts);
 
