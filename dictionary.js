@@ -1576,6 +1576,9 @@ const myDictionaryFull = [
 
     { rus: 'слово', heb: 'מִלָּה', speak: 'милА', type: 'женский' },
     { rus: 'слова', heb: 'מִלִּים', speak: 'милИм', type: 'множественное' },
+
+    { rus: 'квартира', heb: 'דִּירָה', speak: 'дирА', type: 'женский' },
+    { rus: 'квартиры', heb: 'דִּירוֹת', speak: 'дирОт', type: 'множественное' },
 ];
 
 export { myDictionaryFull };
