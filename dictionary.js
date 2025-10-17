@@ -1661,6 +1661,10 @@ const myDictionaryFull = [
 
     { rus: 'цветок', heb: 'פֶּרַח', speak: 'пЭрах', type: 'мужской' },
     { rus: 'цветы', heb: 'פְּרָחִים', speak: 'прахИм', type: 'множественное' },
+
+    { rus: 'причина', heb: 'סִבָּה', speak: 'сибА', type: 'женский' },
+    { rus: 'причины', heb: 'סִבּוֹת', speak: 'сибОт', type: 'множественное' },
+    { rus: 'эти причины', heb: 'הַסִּבּוֹת', speak: 'haсибОт', type: 'женский' },
 ];
 
 export { myDictionaryFull };
