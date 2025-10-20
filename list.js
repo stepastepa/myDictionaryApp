@@ -56,8 +56,8 @@ function createHebList() {
   if (hebList.getElementsByTagName("li").length > 0) return; // cancel
 
   for (let i = 0; i < alhabeticalArrayHeb.length; i++) {
-    let firstLetter = alhabeticalArrayHeb[i].heb[0];
-    let previousFirstLetter = i!==0?alhabeticalArrayHeb[i-1].heb[0]:1;
+    let firstLetter = alhabeticalArrayHeb[i].heb[0].toLowerCase();
+    let previousFirstLetter = i!==0?alhabeticalArrayHeb[i-1].heb[0].toLowerCase():1;
 
     if (firstLetter !== previousFirstLetter) {
       hebList.innerHTML += `
