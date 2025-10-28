@@ -1903,6 +1903,11 @@ const myDictionaryFull = [
 
     { rus: 'туда', heb: 'שָׁמָה', speak: 'шамА', type: '-' },
     { rus: 'Я иду туда.', heb: 'אני הולך שָׁמָה', speak: 'ани hолех шамА', type: '-' },
+
+    { rus: 'сюда', heb: 'הֵנָּה', speak: 'hЕнна', type: '-' },
+    { rus: 'Иди сюда.', heb: 'בוא הֵנָּה', speak: 'бо hЕнна', type: '-' },
+    { rus: 'Посмотри сюда.', heb: 'תסתכל הֵנָּה', speak: 'тистакЕль hЕнна', type: '-' },
+    { rus: 'Я иду сюда.', heb: 'אני הולך הֵנָּה', speak: 'ани hолех hЕнна', type: '-' },
 ];
 
 export { myDictionaryFull };
