@@ -1950,6 +1950,17 @@ const myDictionaryFull = [
     { rus: 'останавливают (они, м)', heb: 'עוֹצְרִים', speak: 'оцрИм', type: 'множественное, мужской' },
     { rus: 'останавливают (они, ж)', heb: 'עוֹצְרוֹת', speak: 'оцрОт', type: 'множественное, женский' },
     { rus: 'Стой!', heb: 'עֲצוֹר', speak: 'ацОр', type: '-' },
+
+    { rus: 'во мне', heb: 'בי', speak: 'би', type: '-' },
+    { rus: 'в тебе (он)', heb: 'בך', speak: 'бАха', type: '-' },
+    { rus: 'в тебе (она)', heb: 'בך', speak: 'бАх', type: '-' },
+    { rus: 'в нём', heb: 'בו', speak: 'бо', type: '-' },
+    { rus: 'в ней', heb: 'בה', speak: 'ба', type: '-' },
+    { rus: 'в нас', heb: 'בנו', speak: 'б-нУ', type: '-' },
+    { rus: 'в вас (м)', heb: 'בכם', speak: 'б-хЭм', type: '-' },
+    { rus: 'в вас (ж)', heb: 'בכן', speak: 'б-хЭн', type: '-' },
+    { rus: 'в них (м)', heb: 'בהם', speak: 'б-hЭм', type: '-' },
+    { rus: 'в них (ж)', heb: 'בהן', speak: 'б-hЭн', type: '-' },
 ];
 
 export { myDictionaryFull };
