@@ -1,8 +1,8 @@
-import { myDictionaryFull } from '/myDictionaryApp/dictionary-4.js';
+import { verbsDictionary } from '/myDictionaryApp/dictionary-4.js';
 // import { myDictionaryFull } from '/dictionary-4.js';
 
 // initial full dictionary
-let myDictionary = myDictionaryFull;
+let myDictionary = verbsDictionary;
 
 /////// url parameters ///////
 const params = new URLSearchParams(window.location.search);
@@ -248,14 +248,14 @@ function repeatWords() {
     memoryButton.classList.toggle("lock-on");
 
     if(memoryLock === true) {
-        myDictionary = myDictionaryFull;
+        myDictionary = verbsDictionary;
         memoryLock = false;
         letterNumber = tempMemoryIndexes[letterNumber]; // retrieve global index from memory
     } else {
         // if (letterNumber === undefined) {
         //     letterNumber = Math.floor(Math.random() * myDictionaryFull.length);
         // }
-        myDictionary = getRandomElements(myDictionaryFull, 10);
+        myDictionary = getRandomElements(verbsDictionary, 10);
         memoryLock = true;
         letterNumber = 0;
     }
