@@ -46,7 +46,7 @@ function createRusList() {
       </li>
     `;
   }
-  rusList.innerHTML = fragment; // add long list to HTML
+  rusList.appendChild(fragment); // add long list to HTML
 }
 
 function createHebList() {
@@ -81,7 +81,7 @@ function createHebList() {
       </li>
     `;
   }
-  hebList.innerHTML = fragment; // add long list to HTML
+  hebList.appendChild(fragment); // add long list to HTML
 }
 
 rusList.innerHTML = ''; // reset
