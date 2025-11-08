@@ -15,6 +15,8 @@ const rusList = document.querySelector("#lists #rusList");
 const hebList = document.querySelector("#lists #hebList");
 
 function createRusList() {
+  const fragment = document.createDocumentFragment(); // temp fragment for long list of elements
+
   if(alhabeticalArrayRus.length === 0) {
       alhabeticalArrayRus = [...myDictionary].sort((a, b) => {
       return a.rus.localeCompare(b.rus, 'ru');
@@ -28,14 +30,14 @@ function createRusList() {
     let previousFirstLetter = i!==0?alhabeticalArrayRus[i-1].rus[0].toLowerCase():1;
 
     if (firstLetter !== previousFirstLetter) {
-      rusList.innerHTML += `
+      fragment.innerHTML += `
         <li class='big-letter'>
           <span>${alhabeticalArrayRus[i].rus[0]}</span>
         </li>
       `;
     }
 
-    rusList.innerHTML += `
+    fragment.innerHTML += `
       <li>
         <a href='./index.html?index=${alhabeticalArrayRus[i].index}'>
           <span>${alhabeticalArrayRus[i].rus}</span>
@@ -44,9 +46,12 @@ function createRusList() {
       </li>
     `;
   }
+  rusList.innerHTML = fragment; // add long list to HTML
 }
 
 function createHebList() {
+  const fragment = document.createDocumentFragment(); // temp fragment for long list of elements
+
   if(alhabeticalArrayHeb.length === 0) {
     alhabeticalArrayHeb = [...myDictionary].sort((a, b) => {
       return a.heb.localeCompare(b.heb, 'he');
@@ -60,14 +65,14 @@ function createHebList() {
     let previousFirstLetter = i!==0?alhabeticalArrayHeb[i-1].heb[0].toLowerCase():1;
 
     if (firstLetter !== previousFirstLetter) {
-      hebList.innerHTML += `
+      fragment.innerHTML += `
         <li class='big-letter'>
           <span>${alhabeticalArrayHeb[i].heb[0]}</span>
         </li>
       `;
     }
 
-    hebList.innerHTML += `
+    fragment.innerHTML += `
       <li class='hebrew'>
         <a href='./index.html?index=${alhabeticalArrayHeb[i].index}'>
           <span>${alhabeticalArrayHeb[i].rus}</span>
@@ -76,6 +81,7 @@ function createHebList() {
       </li>
     `;
   }
+  hebList.innerHTML = fragment; // add long list to HTML
 }
 
 rusList.innerHTML = ''; // reset
