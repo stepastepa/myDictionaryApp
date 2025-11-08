@@ -31,14 +31,14 @@ function createRusList() {
     let previousFirstLetter = i!==0?alhabeticalArrayRus[i-1].rus[0].toLowerCase():1;
 
     if (firstLetter !== previousFirstLetter) {
-      fragment.innerHTML += `
+      tempList.innerHTML += `
         <li class='big-letter'>
           <span>${alhabeticalArrayRus[i].rus[0]}</span>
         </li>
       `;
     }
 
-    fragment.innerHTML += `
+    tempList.innerHTML += `
       <li>
         <a href='./index.html?index=${alhabeticalArrayRus[i].index}'>
           <span>${alhabeticalArrayRus[i].rus}</span>
