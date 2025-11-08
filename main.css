@@ -255,7 +255,7 @@ body.list {
     min-height: 100dvh;
 }
 
-#lists ul:not(.active) {
+#lists div:not(.active) {
     display: none;
 }
 #lists ul {
