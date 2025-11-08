@@ -15,7 +15,7 @@ const rusList = document.querySelector("#lists #rusList");
 const hebList = document.querySelector("#lists #hebList");
 
 function createRusList() {
-  const fragment = document.createDocumentFragment(); // temp fragment for long list of elements
+  // const fragment = document.createDocumentFragment(); // temp fragment for long list of elements
   const tempList = document.createElement('ul');
 
   if(alhabeticalArrayRus.length === 0) {
@@ -47,12 +47,12 @@ function createRusList() {
       </li>
     `;
   }
-  fragment.appendChild(tempList);
-  rusList.appendChild(fragment); // add long list to HTML
+  // fragment.appendChild(tempList);
+  rusList.appendChild(tempList); // add long list to HTML
 }
 
 function createHebList() {
-  const fragment = document.createDocumentFragment(); // temp fragment for long list of elements
+  // const fragment = document.createDocumentFragment(); // temp fragment for long list of elements
   const tempList = document.createElement('ul');
 
   if(alhabeticalArrayHeb.length === 0) {
@@ -84,8 +84,8 @@ function createHebList() {
       </li>
     `;
   }
-  fragment.appendChild(tempList);
-  hebList.appendChild(fragment); // add long list to HTML
+  // fragment.appendChild(tempList);
+  hebList.appendChild(tempList); // add long list to HTML
 }
 
 rusList.innerHTML = ''; // reset
