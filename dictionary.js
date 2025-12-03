@@ -3096,6 +3096,9 @@ const myDictionaryFull = [
 
     { rus: 'уютный, приятный', heb: 'נעים', speak: 'наИм', type: 'мужской' },
     { rus: 'уютная, приятная', heb: 'נעימה', speak: 'неимА', type: 'женский' },
+
+    { rus: 'уютный, домашний', heb: 'ביתי', speak: 'бейтИ', type: 'мужской' },
+    { rus: 'Этот дом уютный', heb: 'הבית הזה ביתי', speak: 'а-бАйт а-зЭ бейтИ', type: '-' },
 ];
 
 export { myDictionaryFull };
