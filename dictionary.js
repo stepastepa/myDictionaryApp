@@ -3251,21 +3251,6 @@ const myDictionaryFull = [
     { rus: 'У меня завтра экзамен', heb: 'יש לי מבחן מחר', speak: 'еш ли мивхАн махАр', type: '-' },
     { rus: 'Мне нужно учиться к экзамену', heb: 'אני צריך ללמוד למבחן', speak: 'анИ царИх лильмОд ле-мивхАн', type: '-' },
     { rus: 'Этот экзамен всегда трудный', heb: 'המבחן הזה תמיד קשה', speak: 'а-мивхАн а-зЭ тамИд кашА', type: '-' },
-
-    ///////// 2025.12.11 /////////////////////////
-    { rus: '', heb: '', speak: '', type: '-' },
-    { rus: '', heb: '', speak: '', type: '-' },
-    { rus: '', heb: '', speak: '', type: '-' },
-    { rus: '', heb: '', speak: '', type: '-' },
-    { rus: '', heb: '', speak: '', type: '-' },
-    
-    { rus: '', heb: '', speak: '', type: 'инфинитив' },
-    { rus: '', heb: '', speak: '', type: 'мужской' },
-    { rus: '', heb: '', speak: '', type: 'женский' },
-    { rus: '', heb: '', speak: '', type: 'множественное, мужской' },
-    { rus: '', heb: '', speak: '', type: 'множественное, женский' },
-    { rus: '', heb: '', speak: '', type: '-' },
-    { rus: '', heb: '', speak: '', type: '-' },
 ];
 
 export { myDictionaryFull };
