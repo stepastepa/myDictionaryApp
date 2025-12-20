@@ -1,5 +1,5 @@
-import { myDictionaryFull } from '/myDictionaryApp/dictionary.js';
-// import { myDictionaryFull } from '/dictionary.js';
+// import { myDictionaryFull } from '/myDictionaryApp/dictionary.js';
+import { myDictionaryFull } from './dictionary.js';
 
 // initial full dictionary
 let myDictionary = myDictionaryFull;
@@ -15,30 +15,43 @@ const rusList = document.querySelector("#lists #rusList");
 const hebList = document.querySelector("#lists #hebList");
 
 function createRusList() {
-  // const fragment = document.createDocumentFragment(); // temp fragment for long list of elements
-  const tempList = document.createElement('ul');
 
+  let p1 = performance.now();
   if(alhabeticalArrayRus.length === 0) {
       alhabeticalArrayRus = [...myDictionary].sort((a, b) => {
       return a.rus.localeCompare(b.rus, 'ru');
     });
   }
+  let p2 = performance.now();
+
+  console.log('⏱️sort', `${p2-p1}ms`);
+
 
   if (rusList.getElementsByTagName("li").length > 0) return; // cancel
 
+  let p3 = performance.now();
+  const tempList = document.createElement('ul');
   for (let i = 0; i < alhabeticalArrayRus.length; i++) {
     let firstLetter = alhabeticalArrayRus[i].rus[0].toLowerCase();
     let previousFirstLetter = i!==0?alhabeticalArrayRus[i-1].rus[0].toLowerCase():1;
 
     if (firstLetter !== previousFirstLetter) {
-      tempList.innerHTML += `
+      const $liCategory = document.createElement('li');
+      //(vmyshko): добавляем элемент предварительно в ДОМ дерево (виртуальное -- оно еще не отображается браузером)
+      tempList.appendChild($liCategory);
+      // меняем штмл только одного элемента, который мы создали,
+      // чтобы не сериализовать (преобразовывать в текст и обратно) всё дерево элементов полностью (это долго)
+      $liCategory.outerHTML = `
         <li class='big-letter'>
           <span>${alhabeticalArrayRus[i].rus[0]}</span>
         </li>
       `;
     }
 
-    tempList.innerHTML += `
+    const $liItem = document.createElement('li');
+    tempList.appendChild($liItem);
+    // меняем только один элемент (также как и выше)
+    $liItem.outerHTML = `
       <li>
         <a href='./index.html?index=${alhabeticalArrayRus[i].index}'>
           <span>${alhabeticalArrayRus[i].rus}</span>
@@ -46,7 +59,13 @@ function createRusList() {
         </a>
       </li>
     `;
+    tempList.appendChild($liItem);
+
   }
+  let p4 = performance.now();
+
+  console.log('⏱️html', `${p4-p3}ms`);
+
   // fragment.appendChild(tempList);
   rusList.appendChild(tempList); // add long list to HTML
 }
