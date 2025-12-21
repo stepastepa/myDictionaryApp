@@ -14,6 +14,7 @@ let alhabeticalArrayRus = [];
 const rusList = document.querySelector("#lists #rusList");
 const hebList = document.querySelector("#lists #hebList");
 
+/*
 function createRusList() {
 
   let p1 = performance.now();
@@ -108,10 +109,52 @@ function createHebList() {
   }
   hebList.appendChild(tempList); // add long list to HTML
 }
+*/
+
+function createLongList(alhabeticalArrayHeb_Rus, heb_rus, he_ru, hebList_rusList, hebrew_russian) {
+  if(alhabeticalArrayHeb_Rus.length === 0) {
+    alhabeticalArrayHeb_Rus = [...myDictionary].sort((a, b) => {
+      return a[heb_rus].localeCompare(b[heb_rus], he_ru);
+    });
+  }
+
+  if (hebList_rusList.getElementsByTagName("li").length > 0) return; // cancel
+
+  const tempList = document.createElement('ul');
+
+  for (let i = 0; i < alhabeticalArrayHeb_Rus.length; i++) {
+    let firstLetter = alhabeticalArrayHeb_Rus[i][heb_rus][0].toLowerCase();
+    let previousFirstLetter = i!==0?alhabeticalArrayHeb_Rus[i-1][heb_rus][0].toLowerCase():1;
+
+    if (firstLetter !== previousFirstLetter) {
+      const $liCategory = document.createElement('li');
+      tempList.appendChild($liCategory);
+      $liCategory.outerHTML = `
+        <li class='big-letter'>
+          <span>${alhabeticalArrayHeb_Rus[i][heb_rus][0]}</span>
+        </li>
+      `;
+    }
+
+    const $liItem = document.createElement('li');
+    tempList.appendChild($liItem);
+    $liItem.outerHTML = `
+      <li class=${hebrew_russian}>
+        <a href='./index.html?index=${alhabeticalArrayHeb_Rus[i].index}'>
+          <span>${alhabeticalArrayHeb_Rus[i].rus}</span>
+          <span>${alhabeticalArrayHeb_Rus[i].heb}</span>
+        </a>
+      </li>
+    `;
+    tempList.appendChild($liItem);
+  }
+  hebList_rusList.appendChild(tempList); // add long list to HTML
+}
 
 rusList.innerHTML = ''; // reset
 hebList.innerHTML = ''; // reset
-createRusList();
+// createRusList();
+createLongList(alhabeticalArrayRus, 'rus', 'ru', rusList, 'russian');
 
 ////////////////////
 //    switcher    //
@@ -126,8 +169,10 @@ function switchList() {
   hebList.classList.toggle('active');
 
   if(this.querySelector('.rus').classList.contains('active')) {
-    createRusList();
+    // createRusList();
+    createLongList(alhabeticalArrayRus, 'rus', 'ru', rusList, 'russian');
   } else if(this.querySelector('.heb').classList.contains('active')) {
-    createHebList();
+    // createHebList();
+    createLongList(alhabeticalArrayHeb, 'heb', 'he', hebList, 'hebrew');
   }
 }
