@@ -1,5 +1,5 @@
-import { myDictionaryFull } from '/myDictionaryApp/dictionary.js';
-// import { myDictionaryFull } from '/dictionary.js';
+// import { myDictionaryFull } from '/myDictionaryApp/dictionary.js';
+import { myDictionaryFull } from './dictionary.js';
 
 // initial full dictionary
 let myDictionary = myDictionaryFull;

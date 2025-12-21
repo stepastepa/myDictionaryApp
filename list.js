@@ -66,14 +66,10 @@ function createRusList() {
 
   console.log('⏱️html', `${p4-p3}ms`);
 
-  // fragment.appendChild(tempList);
   rusList.appendChild(tempList); // add long list to HTML
 }
 
 function createHebList() {
-  // const fragment = document.createDocumentFragment(); // temp fragment for long list of elements
-  const tempList = document.createElement('ul');
-
   if(alhabeticalArrayHeb.length === 0) {
     alhabeticalArrayHeb = [...myDictionary].sort((a, b) => {
       return a.heb.localeCompare(b.heb, 'he');
@@ -82,19 +78,25 @@ function createHebList() {
 
   if (hebList.getElementsByTagName("li").length > 0) return; // cancel
 
+  const tempList = document.createElement('ul');
+
   for (let i = 0; i < alhabeticalArrayHeb.length; i++) {
     let firstLetter = alhabeticalArrayHeb[i].heb[0].toLowerCase();
     let previousFirstLetter = i!==0?alhabeticalArrayHeb[i-1].heb[0].toLowerCase():1;
 
     if (firstLetter !== previousFirstLetter) {
-      tempList.innerHTML += `
+      const $liCategory = document.createElement('li');
+      tempList.appendChild($liCategory);
+      $liCategory.outerHTML = `
         <li class='big-letter'>
           <span>${alhabeticalArrayHeb[i].heb[0]}</span>
         </li>
       `;
     }
 
-    tempList.innerHTML += `
+    const $liItem = document.createElement('li');
+    tempList.appendChild($liItem);
+    $liItem.outerHTML = `
       <li class='hebrew'>
         <a href='./index.html?index=${alhabeticalArrayHeb[i].index}'>
           <span>${alhabeticalArrayHeb[i].rus}</span>
@@ -102,8 +104,8 @@ function createHebList() {
         </a>
       </li>
     `;
+    tempList.appendChild($liItem);
   }
-  // fragment.appendChild(tempList);
   hebList.appendChild(tempList); // add long list to HTML
 }
 
