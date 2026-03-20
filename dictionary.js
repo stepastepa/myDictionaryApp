@@ -3903,6 +3903,7 @@ const myDictionaryFull = [
     { rus: 'жених', heb: 'חתן', speak: 'хатАн', type: 'мужской' },
     { rus: 'невеста', heb: 'כלה', speak: 'калА', type: 'женский' },
     { rus: 'муж', heb: 'בעל', speak: 'баАль', type: 'мужской' },
+    { rus: 'жена', heb: 'אישה', speak: 'ишА', type: 'женский' },
     { rus: 'сын', heb: 'בן', speak: 'бЭн', type: 'мужской' },
     { rus: 'дядя', heb: 'דוד', speak: 'дОд', type: 'мужской' },
     { rus: 'тётя', heb: 'דודה', speak: 'додА', type: 'женский' },
@@ -3911,6 +3912,15 @@ const myDictionaryFull = [
     { rus: 'с', heb: 'עם', speak: 'им', type: '-' },
     { rus: 'Я иду с другом.', heb: 'אני הולך עם חבר', speak: 'ани h-олЕх им хавЕр', type: '-' },
     { rus: 'Он говорит с мамой.', heb: 'הוא מדבר עם אמא', speak: 'h-у медабЕр им Има', type: '-' },
+
+    ///////// 2026.03.20 /////////////////////////
+    { rus: 'стена', heb: 'קיר', speak: 'кир', type: '-' },
+    { rus: 'город', heb: 'עיר', speak: 'ир', type: '-' },
+    { rus: 'песня', heb: 'שיר', speak: 'шир', type: '-' },
+    { rus: 'парень', heb: 'בחור', speak: 'бахУр', type: '-' },
+    { rus: 'девушка', heb: 'בחורה', speak: 'бахурА', type: '-' },
+    { rus: 'курсы иврита', heb: 'אולפן', speak: 'ульпАн', type: '-' },
+    { rus: 'страховка', heb: 'ביטוח', speak: 'битуАх', type: '-' },
 ];
 
 export { myDictionaryFull };
