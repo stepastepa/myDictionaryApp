@@ -3927,6 +3927,8 @@ const myDictionaryFull = [
     { rus: 'джип', heb: 'ג׳יפ', speak: 'джИп', type: '-' },
     { rus: 'жетон', heb: 'ז׳טון', speak: 'жэтОн', type: '-' },
     { rus: 'чили (перец)', heb: 'צ׳ילי', speak: 'чИли', type: '-' },
+    { rus: 'километр', heb: 'קילומטר', speak: 'киломЭтэр', type: '-' },
+    { rus: 'килограмм', heb: 'קילוגרם', speak: 'килогрАм', type: '-' },
 ];
 
 export { myDictionaryFull };
