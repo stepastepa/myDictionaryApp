@@ -4192,17 +4192,11 @@ const myDictionaryFull = [
     { rus: 'аэропорт', heb: 'שדה תעופה', speak: 'сдЭ тэуфА', type: '-' },
     { rus: 'самолёт', heb: 'מטוס', speak: 'матОс', type: '-' },
 
-    { rus: 'кинотеатр', heb: 'קולנוע', speak: 'кольнОа', type: '-' },
+    { rus: 'поезд', heb: 'רכבת', speak: 'ракЭвэт', type: '-' },
+    { rus: 'остановка', heb: 'תחנה', speak: 'таханА', type: '-' },
+    { rus: 'вокзал, железнодорожная станция', heb: 'תכנת רכבת', speak: 'таханАт ракЭвэт', type: '-' },
 
-    ///////// 2026.07.23 /////////////////////////
-
-    { rus: '', heb: '', speak: '', type: 'инфинитив' },
-    { rus: '', heb: '', speak: '', type: 'мужской' },
-    { rus: '', heb: '', speak: '', type: 'женский' },
-    { rus: '', heb: '', speak: '', type: 'множественное, мужской' },
-    { rus: '', heb: '', speak: '', type: 'множественное, женский' },
-    { rus: '', heb: '', speak: '', type: '-' },
-    { rus: '', heb: '', speak: '', type: '-' },
+    { rus: 'кинотеатр', heb: 'קולנוע', speak: 'кольнОа', type: '-' }
 ];
 
 export { myDictionaryFull };
