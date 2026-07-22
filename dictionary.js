@@ -4196,7 +4196,13 @@ const myDictionaryFull = [
     { rus: 'остановка', heb: 'תחנה', speak: 'таханА', type: '-' },
     { rus: 'вокзал, железнодорожная станция', heb: 'תכנת רכבת', speak: 'таханАт ракЭвэт', type: '-' },
 
-    { rus: 'кинотеатр', heb: 'קולנוע', speak: 'кольнОа', type: '-' }
+    { rus: 'кинотеатр', heb: 'קולנוע', speak: 'кольнОа', type: '-' },
+
+    { rus: 'сюда', heb: 'לפה / לכאן', speak: 'ле-по / ле-кАн', type: '-' },
+    { rus: 'отсюда', heb: 'מפה / מכאן', speak: 'ми-по / ми-кАн', type: '-' },
+
+    { rus: 'туда', heb: 'לשם', speak: 'ле-шам', type: '-' },
+    { rus: 'оттуда', heb: 'משם', speak: 'ми-шам', type: '-' }
 ];
 
 export { myDictionaryFull };
