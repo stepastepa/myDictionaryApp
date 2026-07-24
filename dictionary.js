@@ -4238,7 +4238,19 @@ const myDictionaryFull = [
     { rus: 'наверху, сверху (above)', heb: 'למעלה', speak: 'лемАла', type: '-' },
     { rus: 'внизу (under)', heb: 'למטה', speak: 'лемАта', type: '-' },
     { rus: 'между (between)', heb: 'בין', speak: 'бЭйн', type: '-' },
-    { rus: 'рядом, возле (near, next to)', heb: 'ליד', speak: 'лейАд', type: '-' }
+    { rus: 'рядом, возле (near, next to)', heb: 'ליד', speak: 'лейАд', type: '-' },
+
+    { rus: 'every day', heb: 'כל יום', speak: 'коль йОм', type: '-' },
+    { rus: 'all the day, the whole day', heb: 'כל היום', speak: 'коль а-йОм', type: '-' },
+    
+    { rus: 'every week', heb: 'כל שבוע', speak: 'коль шавУа', type: '-' },
+    { rus: 'all the week, the whole week', heb: 'כל השבוע', speak: 'коль а-шавУа', type: '-' },
+    
+    { rus: 'every month', heb: 'כל חודש', speak: 'коль ходЭшь', type: '-' },
+    { rus: 'all the month, the whole month', heb: 'כל החודש', speak: 'коль а-ходЭшь', type: '-' },
+    
+    { rus: 'every year', heb: 'כל שנה', speak: 'коль шанА', type: '-' },
+    { rus: 'all the year, the whole year', heb: 'כל השנה', speak: 'коль а-шанА', type: '-' }
 ];
 
 export { myDictionaryFull };
