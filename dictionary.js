@@ -4250,7 +4250,53 @@ const myDictionaryFull = [
     { rus: 'all the month, the whole month', heb: 'כל החודש', speak: 'коль а-ходЭшь', type: '-' },
     
     { rus: 'every year', heb: 'כל שנה', speak: 'коль шанА', type: '-' },
-    { rus: 'all the year, the whole year', heb: 'כל השנה', speak: 'коль а-шанА', type: '-' }
+    { rus: 'all the year, the whole year', heb: 'כל השנה', speak: 'коль а-шанА', type: '-' },
+    
+    ///////// 2026.07.25 /////////////////////////
+    { rus: 'время', heb: 'זמן', speak: 'змАн', type: '-' },
+    { rus: 'жизнь', heb: 'חיים', speak: 'хаИм', type: '-' },
+    { rus: 'мгновение', heb: 'רגע', speak: 'рЭга', type: '-' },
+    { rus: 'секунда', heb: 'שנייה', speak: 'шнийА', type: '-' },
+    { rus: 'минута', heb: 'דקה', speak: 'дакА', type: '-' },
+    { rus: 'час', heb: 'שעה', speak: 'шаА', type: '-' },
+    { rus: 'четверть часа', heb: 'רבע שעה', speak: 'рЭва шаА', type: '-' },
+    { rus: 'полчаса', heb: 'חצי שעה', speak: 'хацИ шаА', type: '-' },
+
+    { rus: 'сутки (24 часа)', heb: 'יממה', speak: 'йемамА', type: '-' },
+    { rus: 'день', heb: 'יום', speak: 'йОм', type: '-' },
+    { rus: 'неделя', heb: 'שבוע', speak: 'шавУа', type: '-' },
+    { rus: 'следующая неделя', heb: 'שבוע הבא', speak: 'шавУа а-ба', type: '-' },
+    { rus: 'прошлая неделя', heb: 'שבוע שעבר', speak: 'шавУа шэ-авАр', type: '-' },
+    { rus: 'месяц', heb: 'חודש', speak: 'хОдэш', type: '-' },
+    { rus: 'следующий месяц', heb: 'חודש הבא', speak: 'хОдэш а-ба', type: '-' },
+    { rus: 'прошлый месяц', heb: 'חודש שעבר', speak: 'хОдэш шэ-авАр', type: '-' },
+    
+    { rus: 'год', heb: 'שנה', speak: 'шанА', type: '-' },
+    { rus: 'полгода', heb: 'חצי שנה', speak: 'хацИ шанА', type: '-' },
+    { rus: 'следующий год', heb: 'שנה הבאה', speak: 'шанА а-баА', type: '-' },
+    { rus: 'прошлый год', heb: 'שנה שעברה', speak: 'шанА шэ-аврА', type: '-' },
+    { rus: 'зима', heb: 'חורף', speak: 'хОрэф', type: '-' },
+    { rus: 'весна', heb: 'אביב', speak: 'авИв', type: '-' },
+    { rus: 'лето', heb: 'קיץ', speak: 'кАиц', type: '-' },
+    { rus: 'осень', heb: 'סתיו', speak: 'стАв', type: '-' },
+    
+    { rus: 'сегодня', heb: 'היום', speak: 'а-йОм', type: '-' },
+    { rus: 'завтра', heb: 'מחר', speak: 'махАр', type: '-' },
+    { rus: 'послезавтра', heb: 'מחרתיים', speak: 'махоратАим', type: '-' },
+    { rus: 'вчера', heb: 'אתמול', speak: 'этмОль', type: '-' },
+    { rus: 'позавчера', heb: 'שלשום', speak: 'шильшОм', type: '-' },
+    { rus: 'будущее', heb: 'עתיד', speak: 'атИд', type: '-' },
+    { rus: 'настоящее время', heb: 'הווה', speak: 'овЭ', type: '-' },
+    { rus: 'прошлое', heb: 'עבר', speak: 'авАр', type: '-' },
+
+    { rus: 'утро', heb: 'בוקר', speak: 'бОкэр', type: '-' },
+    { rus: 'полдень', heb: 'צהריים', speak: 'цаорАим', type: '-' },
+    { rus: 'вечер', heb: 'ערב', speak: 'Эрэв', type: '-' },
+    { rus: 'полночь', heb: 'חצות', speak: 'хацОт', type: '-' },
+    { rus: 'ночь', heb: 'לילה', speak: 'лАйла', type: '-' },
+    { rus: 'сегодня утром', heb: 'הבוקר', speak: 'а-бОкэр', type: '-' },
+    { rus: 'сегодня вечером', heb: 'הערב', speak: 'а-Эрэв', type: '-' },
+    { rus: 'сегодня ночью', heb: 'הלילה', speak: 'а-лАйла', type: '-' }
 ];
 
 export { myDictionaryFull };
