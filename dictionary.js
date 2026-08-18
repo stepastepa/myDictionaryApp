@@ -4699,7 +4699,17 @@ const myDictionaryFull = [
     { rus: 'много (a lot, many,  much)', heb: 'הרבה', speak: 'hарбЭ', type: '-' },
     { rus: 'немного, чуть-чуть (a little, a bit, a few)', heb: 'קצת', speak: 'кцАт', type: '-' },
     { rus: 'слишком много (too much, too many)', heb: 'יותר מדי', speak: 'йотЭр мидАй', type: '-' },
-    { rus: 'достаточно, хватит (enough, stop)', heb: 'די / מספיק', speak: 'дАй / маспИк', type: '-' }
+    { rus: 'достаточно, хватит (enough, stop)', heb: 'די / מספיק', speak: 'дАй / маспИк', type: '-' },
+
+    ///////// 2026.08.18 /////////////////////////
+    { rus: 'то же / тот же / это же', heb: 'אותו', speak: 'отО', type: '-' },
+    { rus: 'тот же день', heb: 'אותו יום', speak: 'отО йОм', type: '-' },
+    { rus: 'тот же человек', heb: 'אותו אדם', speak: 'отО адОм', type: '-' },
+    { rus: 'то же место', heb: 'אותו מקום', speak: 'отО макОм', type: '-' },
+
+    { rus: 'его', heb: 'אותו', speak: 'отО', type: '-' },
+    { rus: 'Я вижу его.', heb: 'אני רואה אותו', speak: 'анИ роЭ отО', type: '-' },
+    { rus: 'Я люблю его.', heb: 'אני אוהב אותו', speak: 'анИ оhЭв отО', type: '-' }
 ];
 
 export { myDictionaryFull };
