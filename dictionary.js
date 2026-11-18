@@ -5464,7 +5464,12 @@ const myDictionaryFull = [
     { rus: 'прохладно', heb: 'קריר', speak: 'карИр', type: '-' },
     { rus: 'дождливо', heb: 'גשום', speak: 'гашУм', type: '-' },
     { rus: 'солнечно', heb: 'שמשי', speak: 'шимшИ', type: '-' },
-    { rus: 'облачно', heb: 'מעונן', speak: 'меунАн', type: '-' }
+    { rus: 'облачно', heb: 'מעונן', speak: 'меунАн', type: '-' },
+    
+    ///////// 2026.11.18 /////////////////////////
+    { rus: 'снег', heb: 'שלג', speak: 'шЭлэг', type: '-' },
+    { rus: 'дождь', heb: 'גשם', speak: 'гЭшэм', type: '-' },
+    { rus: 'ветер', heb: 'רוח', speak: 'рУах', type: '-' }
 ];
 
 export { myDictionaryFull };
