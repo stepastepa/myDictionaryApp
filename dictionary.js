@@ -5492,7 +5492,13 @@ const myDictionaryFull = [
     { rus: 'сильный дождь', heb: 'גשם חזק', speak: 'гЭшэм хазАк', type: '-' },
     { rus: 'ливень, потоп', heb: 'מבול', speak: 'мабУль', type: '-' },
     { rus: 'буря', heb: 'סופה', speak: 'суфА', type: '-' },
-    { rus: 'шторм, буря', heb: 'סערה', speak: 'сэарА', type: '-' }
+    { rus: 'шторм, буря', heb: 'סערה', speak: 'сэарА', type: '-' },
+    
+    ///////// 2026.11.23 /////////////////////////
+    { rus: 'град', heb: 'ברד', speak: 'барАд', type: '-' },
+
+    { rus: 'гром', heb: 'רעם', speak: 'рАам', type: '-' },
+    { rus: 'молния', heb: 'ברק', speak: 'барАк', type: '-' }
 ];
 
 export { myDictionaryFull };
