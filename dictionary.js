@@ -5510,7 +5510,11 @@ const myDictionaryFull = [
     { rus: 'влажность', heb: 'לחות', speak: 'лахУт', type: '-' },
     { rus: 'сухость', heb: 'יובש', speak: 'йовЭш', type: '-' },
 
-    { rus: 'тень', heb: 'צל', speak: 'цЭль', type: '-' }
+    { rus: 'тень', heb: 'צל', speak: 'цЭль', type: '-' },
+
+    ///////// 2026.11.26 /////////////////////////
+    { rus: 'потепление', heb: 'התחממות', speak: 'hитхаммУт', type: '-' },
+    { rus: 'похолодание', heb: 'התקררות', speak: 'hиткарерУт', type: '-' }
 ];
 
 export { myDictionaryFull };
